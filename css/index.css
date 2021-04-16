@@ -1,0 +1,41 @@
+:root {
+  --Color-primario: #0d0801;
+  --Color-secundario: #335b9c;
+  --Color-variante: #e28e00;
+  --Color-complemento: #141f30;
+  --Color-claro: #ffffff;
+  --Fuente1: "Lato", sans-serif;
+  --Fuente2: "Oswald", sans-serif;
+  --p-size-p: 1.6rem;
+  --p-size-m: 1.7rem;
+  --p-size-g: 1.8rem;
+  --h5-size-p: 2rem;
+  --h5-size-m: 2.13rem;
+  --h5-size-g: 2.25rem;
+  --h4-size-p: 2.5rem;
+  --h4-size-m: 2.66rem;
+  --h4-size-g: 2.81rem;
+  --h3-size-p: 3.13rem;
+  --h3-size-m: 3.32rem;
+  --h3-size-g: 3.52rem;
+  --h2-size-p: 3.91rem;
+  --h2-size-m: 4.15rem;
+  --h2-size-g: 4.39rem;
+  --h1-size-p: 4.88rem;
+  --h1-size-m: 5.19rem;
+  --h1-size-g: 5.49rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: var(--p-size-p);
+}
