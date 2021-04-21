@@ -69,7 +69,7 @@ section {
 
 header {
   width: 100vw;
-  height: 60px;
+  height: 40px;
 }
 .header__section {
   position: relative;
@@ -106,6 +106,7 @@ header {
   left: 100%;
   bottom: 0;
   right: 0;
+  z-index: 1;
   display: block;
   width: 100vw;
   height: 210px;
@@ -137,4 +138,39 @@ header {
 .header__nav a {
   color: var(--Color-complemento);
   text-decoration: none;
+}
+
+/* ---------- MAIN -------------- */
+
+main {
+  width: 100%;
+  height: auto;
+}
+
+.main__hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hero__img img {
+  width: 100%;
+  object-fit: cover;
+}
+.hero__description {
+  position: absolute;
+  width: 90%;
+  height: auto;
+}
+.hero__description img {
+  width: 100%;
+}
+.hero__description h3 {
+  width: 100%;
+  margin-block-start: 180px;
+  margin-block-end: 10px;
 }
