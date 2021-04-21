@@ -108,11 +108,11 @@ header {
   right: 0;
   display: block;
   width: 100vw;
-  height: 200px;
+  height: 210px;
   padding-block-start: 5px;
   padding-block-end: 10px;
-  color: var(--Color-claro);
-  background-color: var(--Color-claro);
+  color: var(--Color-complemento);
+  background-color: var(--Color-secundario);
   text-align: center;
   opacity: 0.95;
   transition: 0.3s;
@@ -124,7 +124,7 @@ header {
   width: 95%;
   margin: 10px auto 0;
   padding: 3px;
-  background-color: var(--Color-secundario);
+  background-color: var(--Color-claro);
   border: 2px solid var(--Color-complemento);
   border-radius: 10px;
   list-style: none;
@@ -135,6 +135,6 @@ header {
   border: 2px solid var(--Color-secundario);
 }
 .header__nav a {
-  color: var(--Color-claro);
+  color: var(--Color-complemento);
   text-decoration: none;
 }
