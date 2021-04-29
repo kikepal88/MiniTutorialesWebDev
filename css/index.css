@@ -213,7 +213,106 @@ main {
   width: 100%;
 }
 .img-buttons__container img {
-  width: 30px;
-  height: 30px;
-  padding: 5px;
+  width: 24px;
+  height: 24px;
+  margin-inline-start: 10px;
+}
+
+.main__tutorials {
+  width: 100%;
+  height: auto;
+}
+.tutorials__cards {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  color: var(--Color-claro);
+  background-color: var(--Color-complemento);
+  border: 1px solid var(--Color-secundario);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px var(--Color-secundario);
+}
+.cards__head {
+  width: 100%;
+  height: auto;
+  margin-block-end: 10px;
+}
+.head__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-block-end: 10px;
+}
+.head__title img {
+  width: 24px;
+  height: 24px;
+}
+.head__description {
+  width: 100%;
+  height: auto;
+  margin-block-end: 10px;
+}
+.head__button button {
+  width: 150px;
+  height: auto;
+  padding: 8px;
+  color: var(--Color-complemento);
+  font-weight: 700;
+  background-color: var(--Color-claro);
+  border: 1px solid var(--Color-secundario);
+  border-radius: 10px;
+}
+.cards__tutorial-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.tutorial__back {
+  position: absolute;
+  top: calc(50% - 125px);
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 250px;
+  background-color: var(--Color-complemento);
+  border: 1px solid var(--Color-variante);
+  border-radius: 10px 0 0 10px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.tutorial__img-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: auto;
+  padding: 0 5px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+.tutorial__img-container img {
+  width: 100%;
+  height: auto;
+  padding: 0 5px;
+  scroll-snap-align: center;
+}
+.tutorial__next {
+  position: absolute;
+  top: calc(50% - 125px);
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 250px;
+  background-color: var(--Color-complemento);
+  border: 1px solid var(--Color-variante);
+  border-radius: 0 10px 10px 0;
+  opacity: 0.5;
+  cursor: pointer;
 }
