@@ -270,49 +270,46 @@ main {
   height: auto;
   overflow: hidden;
 }
-.tutorial__back {
+.tutorial__button {
   position: absolute;
-  top: calc(50% - 125px);
-  left: 0;
+  top: calc(50% - 10px);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 250px;
+  width: 30px;
+  height: 30px;
   background-color: var(--Color-complemento);
   border: 1px solid var(--Color-variante);
-  border-radius: 10px 0 0 10px;
+  border-radius: 50%;
   opacity: 0.5;
   cursor: pointer;
+}
+.tutorial__button:hover {
+  background-color: var(--Color-claro);
+}
+.tutorial__button:active {
+  background-color: var(--Color-claro);
+}
+.button__back {
+  left: 0;
 }
 .tutorial__img-container {
   display: flex;
   flex-wrap: nowrap;
+  width: 400%;
+  height: 100%;
+}
+.img__container {
+  display: inline-block;
   width: 100%;
   height: auto;
-  padding: 0 5px;
-  overflow-x: scroll;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
 }
-.tutorial__img-container img {
+.img__container img {
+  display: block;
   width: 100%;
   height: auto;
-  padding: 0 5px;
-  scroll-snap-align: center;
+  object-fit: cover;
 }
-.tutorial__next {
-  position: absolute;
-  top: calc(50% - 125px);
+.button__next {
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 250px;
-  background-color: var(--Color-complemento);
-  border: 1px solid var(--Color-variante);
-  border-radius: 0 10px 10px 0;
-  opacity: 0.5;
-  cursor: pointer;
 }
