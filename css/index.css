@@ -298,9 +298,9 @@ main {
   flex-wrap: nowrap;
   width: 400%;
   height: 100%;
+  margin-inline-start: -100%;
 }
 .img__container {
-  display: inline-block;
   width: 100%;
   height: auto;
 }
