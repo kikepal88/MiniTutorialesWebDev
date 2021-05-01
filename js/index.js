@@ -30,9 +30,6 @@ function Back() {
   }, 500);
 }
 
-setInterval(function() {
-  Next();}, 7000);
-
 function showMobileMenu () {
   document.getElementById('header__icon-menu').classList.toggle('icon-close');
   document.getElementById('header__nav').classList.toggle('is-active');

@@ -225,6 +225,7 @@ main {
 .tutorials__cards {
   width: 100%;
   height: auto;
+  margin-block-end: 15px;
   padding: 15px;
   color: var(--Color-claro);
   background-color: var(--Color-complemento);
@@ -287,20 +288,35 @@ main {
 .tutorial__button:hover {
   background-color: var(--Color-claro);
 }
-.tutorial__button:active {
-  background-color: var(--Color-claro);
-}
 .button__back {
   left: 0;
 }
 .tutorial__img-container {
   display: flex;
   flex-wrap: nowrap;
-  width: 400%;
   height: 100%;
   margin-inline-start: -100%;
 }
+.tutorial__img-container.length4 {
+  width: 400%;
+}
+.tutorial__img-container.length5 {
+  width: 500%;
+}
+.tutorial__img-container.length6 {
+  width: 600%;
+}
+.tutorial__img-container.length7 {
+  width: 700%;
+}
+.tutorial__img-container.length8 {
+  width: 800%;
+}
+.tutorial__img-container.length9 {
+  width: 900%;
+}
 .img__container {
+  max-width: 360px;
   width: 100%;
   height: auto;
 }
