@@ -233,6 +233,9 @@ main {
   border-radius: 10px;
   box-shadow: 2px 2px 5px var(--Color-secundario);
 }
+.tutorials__cards.hide {
+  display: none;
+}
 .cards__head {
   width: 100%;
   height: auto;
