@@ -196,10 +196,30 @@ main {
   border: 1px solid var(--Color-variante);
   border-radius: 10px;
   box-shadow: 1px 1px 5px var(--Color-variante);
+}
+.buttons__all.is-active {
+  opacity: 1;
+}
+.buttons__html.is-active {
+  opacity: 1;
+}
+.buttons__css.is-active {
+  opacity: 1;
+}
+.buttons__js.is-active {
+  opacity: 1;
+}
+.buttons__all {
   opacity: 0.7;
 }
-.buttons__container button.is-active {
-  opacity: 1;
+.buttons__html {
+  opacity: 0.7;
+}
+.buttons__css {
+  opacity: 0.7;
+}
+.buttons__js {
+  opacity: 0.7;
 }
 .buttons__container h4 {
   width: 100%;

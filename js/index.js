@@ -31,7 +31,7 @@
 // }
 
 const allButton = document.querySelector(".buttons__all");
-const htmlButton = document.querySelector(".buttons__hmtl");
+const htmlButton = document.querySelector(".buttons__html");
 const cssButton = document.querySelector(".buttons__css");
 const jsButton = document.querySelector(".buttons__js");
 
@@ -40,6 +40,11 @@ const cssCards = Array.from(document.querySelectorAll(".CSS"));
 const jsCards = Array.from(document.querySelectorAll(".JS"));
 
 function showHtmlCards() {
+  showAll();
+  allButton.classList.remove("is-active");
+  htmlButton.classList.add("is-active");
+  cssButton.classList.remove("is-active");
+  jsButton.classList.remove("is-active");
   cssCards.forEach(function(item){
     let aditionalCategory1 = item.getAttribute('data-key');
     let aditionalCategory2 = item.getAttribute('data-key2');
@@ -63,6 +68,11 @@ function showHtmlCards() {
 }
 
 function showCssCards() {
+  showAll();
+  allButton.classList.remove("is-active");
+  htmlButton.classList.remove("is-active");
+  cssButton.classList.add("is-active");
+  jsButton.classList.remove("is-active");
   htmlCards.forEach(function(item){
     let aditionalCategory1 = item.getAttribute('data-key');
     let aditionalCategory2 = item.getAttribute('data-key2');
@@ -86,6 +96,11 @@ function showCssCards() {
 }
 
 function showJsCards() {
+  showAll();
+  allButton.classList.remove("is-active");
+  htmlButton.classList.remove("is-active");
+  cssButton.classList.remove("is-active");
+  jsButton.classList.add("is-active");
   htmlCards.forEach(function(item){
     let aditionalCategory1 = item.getAttribute('data-key');
     let aditionalCategory2 = item.getAttribute('data-key2');
@@ -109,6 +124,10 @@ function showJsCards() {
 }
 
 function showAll() {
+  allButton.classList.add("is-active");
+  htmlButton.classList.remove("is-active");
+  cssButton.classList.remove("is-active");
+  jsButton.classList.remove("is-active");
   htmlCards.forEach(function(item){
     item.classList.remove("hide");
   });
