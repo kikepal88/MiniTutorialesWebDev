@@ -197,6 +197,9 @@ main {
   border-radius: 10px;
   box-shadow: 1px 1px 5px var(--Color-variante);
 }
+.buttons__container button:hover {
+  opacity: 0.8;
+}
 .buttons__all.is-active {
   opacity: 1;
 }
@@ -311,9 +314,6 @@ main {
 .tutorial__button:hover {
   background-color: var(--Color-claro);
 }
-.button__back {
-  left: 0;
-}
 .tutorial__img-container {
   display: flex;
   flex-wrap: nowrap;
@@ -348,6 +348,30 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+.tutorial__indicator-container {
+  position: absolute;
+  bottom: 20px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.indicator__mark {
+  width: 7px;
+  height: 7px;
+  margin: 4px;
+  background-color: var(--Color-claro);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+.indicator__mark.actived {
+  background-color: var(--Color-variante);
+  opacity: 1;
+}
+.button__back {
+  left: 0;
 }
 .button__next {
   right: 0;
