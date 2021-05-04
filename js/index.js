@@ -39,6 +39,34 @@ const htmlCards = Array.from(document.querySelectorAll(".HTML"));
 const cssCards = Array.from(document.querySelectorAll(".CSS"));
 const jsCards = Array.from(document.querySelectorAll(".JS"));
 
+const slider = Array.from(document.getElementsByClassName("tutorial__img-container"));
+console.log(slider);
+const indicatorContainer = Array.from(document.getElementsByClassName("tutorial__indicator-container"));
+console.log(indicatorContainer);
+const indicatorMark = indicatorContainer.forEach(function(item){
+  let marks = item.getElementsByClassName("indicator__mark");
+  console.log(marks);
+});
+const backButton = Array.from(document.getElementsByClassName("button__back"));
+console.log(backButton);
+const nextButton = Array.from(document.getElementsByClassName("button__next"));
+console.log(nextButton);
+
+function Next() {
+  slider.forEach(function(item){
+    item.addEventListener("click", function() {
+      var margin = "0";
+      let changeMargin = "-100%" 
+      function nextMargin(mar, changeMar) {
+        item.style.marginInlineStart = `calc(${mar} + ${changeMar})`;
+        margin = margin + changeMargin;
+      }
+      nextMargin(margin, changeMargin);
+    })
+  })
+}
+
+
 function showHtmlCards() {
   showAll();
   allButton.classList.remove("is-active");

@@ -329,7 +329,6 @@ main {
   display: flex;
   flex-wrap: nowrap;
   height: 100%;
-  margin-inline-start: -100%;
 }
 .tutorial__img-container.length4 {
   width: 400%;
@@ -386,4 +385,10 @@ main {
 }
 .button__next {
   right: 0;
+}
+.button__back.hide {
+  display: none;
+}
+.button__next.hide {
+  display: none;
 }
