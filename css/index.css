@@ -122,7 +122,7 @@ header {
   left: 0;
 }
 .header__nav li {
-  width: 90%;
+  width: 70%;
   margin: 10px auto 0;
   padding: 3px;
   background-color: var(--Color-claro);
@@ -132,6 +132,7 @@ header {
   cursor: pointer;
 }
 .header__nav li:active {
+  color: var(--Color-claro);
   background-color: var(--Color-complemento);
   border: 2px solid var(--Color-secundario);
 }
@@ -198,31 +199,41 @@ main {
   box-shadow: 1px 1px 5px var(--Color-variante);
 }
 .buttons__container button:hover {
+  border: 1px solid var(--Color-secundario);
+  box-shadow: 1px 1px 5px var(--Color-secundario);
   opacity: 0.8;
 }
 .buttons__all.is-active {
+  border: 1px solid var(--Color-secundario);
+  box-shadow: 1px 1px 5px var(--Color-secundario);
   opacity: 1;
 }
 .buttons__html.is-active {
+  border: 1px solid var(--Color-secundario);
+  box-shadow: 1px 1px 5px var(--Color-secundario);
   opacity: 1;
 }
 .buttons__css.is-active {
+  border: 1px solid var(--Color-secundario);
+  box-shadow: 1px 1px 5px var(--Color-secundario);
   opacity: 1;
 }
 .buttons__js.is-active {
+  border: 1px solid var(--Color-secundario);
+  box-shadow: 1px 1px 5px var(--Color-secundario);
   opacity: 1;
 }
 .buttons__all {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .buttons__html {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .buttons__css {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .buttons__js {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .buttons__container h4 {
   width: 100%;
