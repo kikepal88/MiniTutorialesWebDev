@@ -1,35 +1,3 @@
-// const TutorialSlider = document.querySelector("#tutorial__slider");
-// let imgTutorials = document.querySelectorAll(".img__container");
-// let imgTutorialsLast = imgTutorials[imgTutorials.length - 1];
-
-// const buttonBack = document.querySelector("button__back");
-// const buttonNext = document.querySelector("button__next");
-
-// TutorialSlider.insertAdjacentElement('afterbegin', imgTutorialsLast);
-
-// function Next() {
-//   let imgTutorialsFirst = document.querySelectorAll(".img__container")[0];
-//   TutorialSlider.style.marginInlineStart = "-200%";
-//   TutorialSlider.style.transition = "all 0.5s";
-//   setTimeout(function(){
-//     TutorialSlider.style.transition = "none";
-//     TutorialSlider.insertAdjacentElement('beforeend', imgTutorialsFirst);
-//     TutorialSlider.style.marginInlineStart = "-100%";
-//   }, 500);
-// }
-
-// function Back() {
-//   let imgTutorials = document.querySelectorAll(".img__container");
-//   let imgTutorialsLast = imgTutorials[imgTutorials.length - 1];
-//   TutorialSlider.style.marginInlineStart = "0";
-//   TutorialSlider.style.transition = "all 0.5s";
-//   setTimeout(function(){
-//     TutorialSlider.style.transition = "none";
-//     TutorialSlider.insertAdjacentElement('afterbegin', imgTutorialsLast);
-//     TutorialSlider.style.marginInlineStart = "-100%";
-//   }, 500);
-// }
-
 const allButton = document.querySelector(".buttons__all");
 const htmlButton = document.querySelector(".buttons__html");
 const cssButton = document.querySelector(".buttons__css");
@@ -39,31 +7,64 @@ const htmlCards = Array.from(document.querySelectorAll(".HTML"));
 const cssCards = Array.from(document.querySelectorAll(".CSS"));
 const jsCards = Array.from(document.querySelectorAll(".JS"));
 
+const idSlider = [];
+console.log(idSlider);
 const slider = Array.from(document.getElementsByClassName("tutorial__img-container"));
 console.log(slider);
-const indicatorContainer = Array.from(document.getElementsByClassName("tutorial__indicator-container"));
-console.log(indicatorContainer);
-const indicatorMark = indicatorContainer.forEach(function(item){
-  let marks = item.getElementsByClassName("indicator__mark");
-  console.log(marks);
-});
-const backButton = Array.from(document.getElementsByClassName("button__back"));
-console.log(backButton);
+
+function getIdSlider() {
+  slider.forEach(function(item){
+    let id = item.getAttribute("id");
+    idSlider.push(id);
+  })
+}
+getIdSlider();
+
+const idNextButtton = [];
+console.log(idNextButtton);
 const nextButton = Array.from(document.getElementsByClassName("button__next"));
 console.log(nextButton);
 
-function Next() {
-  slider.forEach(function(item){
-    item.addEventListener("click", function() {
-      var margin = "0";
-      let changeMargin = "-100%" 
-      function nextMargin(mar, changeMar) {
-        item.style.marginInlineStart = `calc(${mar} + ${changeMar})`;
-        margin = margin + changeMargin;
-      }
-      nextMargin(margin, changeMargin);
-    })
+function getIdNextButton() {
+  nextButton.forEach(function(item){
+    let id = item.getAttribute("id");
+    idNextButtton.push(id);
   })
+}
+getIdNextButton();
+
+// const indicatorContainer = Array.from(document.getElementsByClassName("tutorial__indicator-container"));
+// console.log(indicatorContainer);
+// const indicatorMark = indicatorContainer.forEach(function(item){
+//   let marks = item.getElementsByClassName("indicator__mark");
+//   console.log(marks);
+// });
+// const backButton = Array.from(document.getElementsByClassName("button__back"));
+// console.log(backButton);
+
+let margin = 0;
+let changeMargin = 100 
+
+function Next(index) {
+  let sliderGetClick = document.getElementById(`${idSlider[index]}`);
+  function sliderActive() {
+      sliderGetClick.style.marginInlineStart = `${margin - changeMargin}%`;
+      margin = margin - changeMargin;
+      return margin;
+  }
+  switch(margin) {
+    case 0:
+    case -100:
+    case -200:
+    case -300:
+    case -400:
+    case -500:
+    case -600:
+    case -700:
+    case -800:
+    case -900:
+      sliderActive();
+  }
 }
 
 

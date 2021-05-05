@@ -329,6 +329,7 @@ main {
   display: flex;
   flex-wrap: nowrap;
   height: 100%;
+  transition: all 0.5s;
 }
 .tutorial__img-container.length4 {
   width: 400%;
