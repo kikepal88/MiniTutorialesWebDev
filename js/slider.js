@@ -1,8 +1,9 @@
 const slider = Array.from(document.getElementsByClassName("tutorial__img-container"));
 const idSlider = [];
+const marginArray = [];
+const counterArray = [];
 const nextButton = Array.from(document.getElementsByClassName("button__next"));
 const idNextButtton = [];
-let margin = 0;
 let counter = 0;
 const changeMargin = 100 
 
@@ -14,6 +15,15 @@ function getIdSlider() {
 }
 getIdSlider();
 
+function getMarginSlider() {
+  slider.forEach(function(item){
+    let objectStyles = window.getComputedStyle(item);
+    let marginLeft = parseFloat(objectStyles.getPropertyValue("margin-inline-start"));
+    marginArray.push(marginLeft);
+    counterArray.push(marginLeft);
+  })
+}
+getMarginSlider();
 
 function getIdNextButton() {
   nextButton.forEach(function(item){
@@ -28,28 +38,24 @@ function Next(index) {
   let sliderGetClick = document.getElementById(`${idSlider[index]}`);
   let imagesOnSlider = Array.from(sliderGetClick.getElementsByClassName("img__container"));
   let lengthImagesArray = imagesOnSlider.length;
-  console.log(`El contador es ${counter}`);
-  console.log(buttonNextGetClick);
-  console.log(sliderGetClick);
-  console.log(imagesOnSlider);
-  console.log(`La cantidad de images es ${lengthImagesArray}`);
+  let objectMargin = marginArray[index];
+  let objectCounter = counterArray[index];
   function addMargin(){
-    sliderGetClick.style.marginInlineStart = `${margin - changeMargin}%`;
-    counter++;
-    margin = margin - changeMargin;
-    return margin, counter;
+    sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
+    counterArray[index] = objectCounter + 1;
+    marginArray[index] = objectMargin - changeMargin;
   }
   const sliderActive = function() {
     if(lengthImagesArray === lengthImagesArray){
-      if(counter < lengthImagesArray - 2){
+      if(counterArray[index] < lengthImagesArray - 2){
         addMargin();
-      } else if(counter <= lengthImagesArray - 1) {
+      } else if(counterArray[index] <= lengthImagesArray - 1) {
         addMargin();
         buttonNextGetClick.style.display = "none";
       }
     }
   }
-  switch(margin) {
+  switch(marginArray[index]) {
     case 0:
     case -100:
     case -200:
