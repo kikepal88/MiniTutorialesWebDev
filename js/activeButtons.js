@@ -7,67 +7,6 @@ const htmlCards = Array.from(document.querySelectorAll(".HTML"));
 const cssCards = Array.from(document.querySelectorAll(".CSS"));
 const jsCards = Array.from(document.querySelectorAll(".JS"));
 
-const idSlider = [];
-console.log(idSlider);
-const slider = Array.from(document.getElementsByClassName("tutorial__img-container"));
-console.log(slider);
-
-function getIdSlider() {
-  slider.forEach(function(item){
-    let id = item.getAttribute("id");
-    idSlider.push(id);
-  })
-}
-getIdSlider();
-
-const idNextButtton = [];
-console.log(idNextButtton);
-const nextButton = Array.from(document.getElementsByClassName("button__next"));
-console.log(nextButton);
-
-function getIdNextButton() {
-  nextButton.forEach(function(item){
-    let id = item.getAttribute("id");
-    idNextButtton.push(id);
-  })
-}
-getIdNextButton();
-
-// const indicatorContainer = Array.from(document.getElementsByClassName("tutorial__indicator-container"));
-// console.log(indicatorContainer);
-// const indicatorMark = indicatorContainer.forEach(function(item){
-//   let marks = item.getElementsByClassName("indicator__mark");
-//   console.log(marks);
-// });
-// const backButton = Array.from(document.getElementsByClassName("button__back"));
-// console.log(backButton);
-
-let margin = 0;
-let changeMargin = 100 
-
-function Next(index) {
-  let sliderGetClick = document.getElementById(`${idSlider[index]}`);
-  function sliderActive() {
-      sliderGetClick.style.marginInlineStart = `${margin - changeMargin}%`;
-      margin = margin - changeMargin;
-      return margin;
-  }
-  switch(margin) {
-    case 0:
-    case -100:
-    case -200:
-    case -300:
-    case -400:
-    case -500:
-    case -600:
-    case -700:
-    case -800:
-    case -900:
-      sliderActive();
-  }
-}
-
-
 function showHtmlCards() {
   showAll();
   allButton.classList.remove("is-active");
@@ -166,11 +105,4 @@ function showAll() {
   jsCards.forEach(function(item){
     item.classList.remove("hide");
   });
-}
-
-
-function showMobileMenu () {
-  document.getElementById('header__icon-menu').classList.toggle('icon-close');
-  document.getElementById('header__nav').classList.toggle('is-active');
-  document.getElementById('header__section').classList.toggle('menu__is-active');
 }
