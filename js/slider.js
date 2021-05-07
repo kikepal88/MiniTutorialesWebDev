@@ -4,7 +4,9 @@ const marginArray = [];
 const counterArray = [];
 const nextButton = Array.from(document.getElementsByClassName("button__next"));
 const idNextButtton = [];
-let counter = 0;
+const marksContainer = Array.from(document.getElementsByClassName("tutorial__indicator-container"));
+const idMarksContainer = [];
+console.log(idMarksContainer);
 const changeMargin = 100 
 
 function getIdSlider() {
@@ -33,17 +35,35 @@ function getIdNextButton() {
 }
 getIdNextButton();
 
+function getIdMarksContainer() {
+  marksContainer.forEach(function(item){
+    let id = item.getAttribute("id");
+    idMarksContainer.push(id);
+  })
+}
+getIdMarksContainer();
+
 function Next(index) {
   let buttonNextGetClick = document.getElementById(`${idNextButtton[index]}`);
   let sliderGetClick = document.getElementById(`${idSlider[index]}`);
   let imagesOnSlider = Array.from(sliderGetClick.getElementsByClassName("img__container"));
   let lengthImagesArray = imagesOnSlider.length;
+  let markContainerOnSlider = document.getElementById(`${idMarksContainer[index]}`);
+  console.log(markContainerOnSlider)
+  let marksOnSlider = Array.from(markContainerOnSlider.getElementsByClassName("indicator__mark"));
+  console.log(marksOnSlider);
   let objectMargin = marginArray[index];
   let objectCounter = counterArray[index];
+  let markActive = marksOnSlider[objectCounter];
+  let markToActivate = marksOnSlider[objectCounter + 1];
+  console.log(markActive);
+  console.log(counterArray);
   function addMargin(){
     sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
     counterArray[index] = objectCounter + 1;
     marginArray[index] = objectMargin - changeMargin;
+    markActive.classList.remove("actived")
+    markToActivate.classList.add("actived")
   }
   const sliderActive = function() {
     if(lengthImagesArray === lengthImagesArray){
