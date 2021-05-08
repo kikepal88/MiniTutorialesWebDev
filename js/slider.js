@@ -3,10 +3,11 @@ const idSlider = [];
 const marginArray = [];
 const counterArray = [];
 const nextButton = Array.from(document.getElementsByClassName("button__next"));
+console.log(nextButton);
 const idNextButtton = [];
 const backButton = Array.from(document.getElementsByClassName("button__back"));
-const idBackButtton = [];
-console.log(idBackButtton);
+console.log(backButton);
+const idBackButton = [];
 const marksContainer = Array.from(document.getElementsByClassName("tutorial__indicator-container"));
 const idMarksContainer = [];
 const changeMargin = 100 
@@ -40,7 +41,7 @@ getIdNextButton();
 function getIdBackButton() {
   backButton.forEach(function(item){
     let id = item.getAttribute("id");
-    idBackButtton.push(id);
+    idBackButton.push(id);
   })
 }
 getIdBackButton();
@@ -53,9 +54,9 @@ function getIdMarksContainer() {
 }
 getIdMarksContainer();
 
-function Next(index) {
-  let buttonBackToAppear = document.getElementById(`${idBackButtton[index]}`);
-  buttonBackToAppear.classList.remove("hide");
+function Slider(index, button) {
+  let buttonBackGetClick = document.getElementById(`${idBackButton[index]}`);
+  buttonBackGetClick.classList.remove("hide");
   let buttonNextGetClick = document.getElementById(`${idNextButtton[index]}`);
   let sliderGetClick = document.getElementById(`${idSlider[index]}`);
   let imagesOnSlider = Array.from(sliderGetClick.getElementsByClassName("img__container"));
@@ -65,15 +66,28 @@ function Next(index) {
   let objectMargin = marginArray[index];
   let objectCounter = counterArray[index];
   let markActive = marksOnSlider[objectCounter];
-  let markToActivate = marksOnSlider[objectCounter + 1];
+  let nextMarkToActivate = marksOnSlider[objectCounter + 1];
+  let backMarkToActivate = marksOnSlider[objectCounter - 1];
+  let ElementTarget = button;
+  console.log(ElementTarget);
+
   function addMargin(){
     sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
     counterArray[index] = objectCounter + 1;
     marginArray[index] = objectMargin - changeMargin;
     markActive.classList.remove("actived")
-    markToActivate.classList.add("actived")
+    nextMarkToActivate.classList.add("actived")
   }
-  const sliderActive = function() {
+
+  function removeMargin(){
+    sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin}%`;
+    counterArray[index] = objectCounter - 1;
+    marginArray[index] = objectMargin + changeMargin;
+    markActive.classList.remove("actived")
+    backMarkToActivate.classList.add("actived")
+  }
+
+  const nextSliderActive = function() {
     if(lengthImagesArray === lengthImagesArray){
       if(counterArray[index] < lengthImagesArray - 2){
         addMargin();
@@ -83,17 +97,48 @@ function Next(index) {
       }
     }
   }
-  switch(marginArray[index]) {
-    case 0:
-    case -100:
-    case -200:
-    case -300:
-    case -400:
-    case -500:
-    case -600:
-    case -700:
-    case -800:
-    case -900:
-      sliderActive();
+
+  const backSliderActive = function() {
+    if(lengthImagesArray === lengthImagesArray){
+      if(counterArray[index] === 1){
+        removeMargin();
+        buttonBackGetClick.classList.add("hide");
+      } else if(counterArray[index] > 1) {
+        removeMargin();
+      }
+    }
   }
+
+  if(ElementTarget === 'next') {
+    switch(marginArray[index]) {
+      case 0:
+      case -100:
+      case -200:
+      case -300:
+      case -400:
+      case -500:
+      case -600:
+      case -700:
+      case -800:
+      case -900:
+        nextSliderActive();
+    }
+  } else if(ElementTarget === 'back') {
+    switch(marginArray[index]) {
+      case 0:
+      case -100:
+      case -200:
+      case -300:
+      case -400:
+      case -500:
+      case -600:
+      case -700:
+      case -800:
+      case -900:
+        backSliderActive();
+    }
+  }
+
+  console.log(marginArray);
+  console.log(counterArray);
 }
