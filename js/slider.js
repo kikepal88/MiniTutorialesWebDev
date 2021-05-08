@@ -103,6 +103,9 @@ function Slider(index, button) {
       if(counterArray[index] === 1){
         removeMargin();
         buttonBackGetClick.classList.add("hide");
+      } else if(counterArray[index] === lengthImagesArray - 1) {
+        removeMargin();
+        buttonNextGetClick.style.display = "flex";
       } else if(counterArray[index] > 1) {
         removeMargin();
       }
@@ -138,7 +141,6 @@ function Slider(index, button) {
         backSliderActive();
     }
   }
-
   console.log(marginArray);
   console.log(counterArray);
 }
