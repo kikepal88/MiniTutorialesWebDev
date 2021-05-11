@@ -136,6 +136,11 @@ header {
   background-color: var(--Color-complemento);
   border: 2px solid var(--Color-secundario);
 }
+.header__nav li:focus {
+  color: var(--Color-claro);
+  background-color: var(--Color-complemento);
+  border: 2px solid var(--Color-secundario);
+}
 .header__nav a {
   color: var(--Color-complemento);
   text-decoration: none;
@@ -250,6 +255,63 @@ main {
   width: 24px;
   height: 24px;
   margin-inline-start: 10px;
+}
+
+.main__paged {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+.paged__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--Color-variante);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.paged__buttons:hover {
+  background-color: var(--Color-claro);
+}
+.paged__numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 90%;
+  height: auto;
+}
+.number__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border: 2px solid var(--Color-claro);
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.number__item:hover {
+  color: var(--Color-claro);
+  background-color: var(--Color-complemento);
+  border: 2px solid var(--Color-secundario);
+  opacity: 0.9;
+}
+.number__item.actived {
+  width: 40px;
+  height: 40px;
+  color: var(--Color-claro);
+  font-weight: 700;
+  background-color: var(--Color-complemento);
+  border: 2px solid var(--Color-secundario);
+  opacity: 1;
 }
 
 .main__tutorials {
