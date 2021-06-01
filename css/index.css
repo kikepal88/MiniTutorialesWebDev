@@ -266,6 +266,9 @@ main {
   height: auto;
   margin: 0 auto;
 }
+.main__paged.hidden {
+  display: none;
+}
 .paged__buttons {
   display: flex;
   justify-content: center;

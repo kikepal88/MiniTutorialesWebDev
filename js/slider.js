@@ -3,14 +3,12 @@ const idSlider = [];
 const marginArray = [];
 const counterArray = [];
 const nextButton = Array.from(document.getElementsByClassName("button__next"));
-console.log(nextButton);
 const idNextButtton = [];
 const backButton = Array.from(document.getElementsByClassName("button__back"));
-console.log(backButton);
 const idBackButton = [];
 const marksContainer = Array.from(document.getElementsByClassName("tutorial__indicator-container"));
 const idMarksContainer = [];
-const changeMargin = 100 
+const changeMargin = 100;
 
 function getIdSlider() {
   slider.forEach(function(item){
