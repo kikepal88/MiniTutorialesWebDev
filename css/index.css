@@ -258,7 +258,7 @@ main {
 }
 
 .main__paged {
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
@@ -266,8 +266,8 @@ main {
   height: auto;
   margin: 0 auto;
 }
-.main__paged.hidden {
-  display: none;
+.main__paged.show {
+  display: flex;
 }
 .paged__buttons {
   display: flex;

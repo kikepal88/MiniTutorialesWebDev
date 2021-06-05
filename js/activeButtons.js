@@ -33,6 +33,7 @@ function showHtmlCards() {
       }
     }
   });
+  showPagedSection();
 }
 
 function showCssCards() {
@@ -61,6 +62,7 @@ function showCssCards() {
       }
     }
   });
+  showPagedSection();
 }
 
 function showJsCards() {
@@ -89,6 +91,7 @@ function showJsCards() {
       }
     }
   });
+  showPagedSection();
 }
 
 function showAll() {
@@ -105,4 +108,5 @@ function showAll() {
   jsCards.forEach(function(item){
     item.classList.remove("hide");
   });
+  showPagedSection();
 }
