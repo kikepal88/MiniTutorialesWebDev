@@ -280,7 +280,8 @@ main {
   cursor: pointer;
 }
 .paged__buttons:hover {
-  background-color: var(--Color-claro);
+  background-color: var(--Color-complemento);
+  border: 2px solid var(--Color-claro);
 }
 .paged__numbers {
   display: flex;
@@ -300,6 +301,9 @@ main {
   border: 2px solid var(--Color-claro);
   border-radius: 50%;
   opacity: 0.7;
+}
+.number__item.hide {
+  display: none;
 }
 .number__item:hover {
   color: var(--Color-claro);
