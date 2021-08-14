@@ -28,6 +28,10 @@ function showPagedSection() {
       pagedSection.classList.remove("show");
     }
   } else if(classOfHtmlButton === "buttons__html is-active"){
+    numberOfPages[1].classList.add("hide");
+    numberOfPages[2].classList.add("hide");
+    numberOfPages[3].classList.add("hide");
+    numberOfPages[4].classList.add("hide");
     if(quantityHtmlCards > 5) {
       pagedSection.classList.add("show");
       numberOfPages[1].classList.remove("hide");
@@ -42,6 +46,10 @@ function showPagedSection() {
       pagedSection.classList.remove("show");
     }
   } else if(classOfCssButton === "buttons__css is-active"){
+    numberOfPages[1].classList.add("hide");
+    numberOfPages[2].classList.add("hide");
+    numberOfPages[3].classList.add("hide");
+    numberOfPages[4].classList.add("hide");
     if(quantityCssCards > 5) {
       pagedSection.classList.add("show");
       numberOfPages[1].classList.remove("hide");
@@ -56,6 +64,10 @@ function showPagedSection() {
       pagedSection.classList.remove("show");
     }
   } else if(classOfJsButton === "buttons__js is-active"){
+    numberOfPages[1].classList.add("hide");
+    numberOfPages[2].classList.add("hide");
+    numberOfPages[3].classList.add("hide");
+    numberOfPages[4].classList.add("hide");
     if(quantityJsCards > 5) {
       pagedSection.classList.add("show");
       numberOfPages[1].classList.remove("hide");
