@@ -8,7 +8,9 @@ const cssCards = Array.from(document.querySelectorAll(".CSS"));
 const jsCards = Array.from(document.querySelectorAll(".JS"));
 
 function showHtmlCards() {
-  showAll();
+  for(i = 0; i < 5; i++) {
+    htmlCards[i].classList.remove("hide");
+  };
   allButton.classList.remove("is-active");
   htmlButton.classList.add("is-active");
   cssButton.classList.remove("is-active");
@@ -37,7 +39,9 @@ function showHtmlCards() {
 }
 
 function showCssCards() {
-  showAll();
+  for(i = 0; i < 5; i++) {
+    cssCards[i].classList.remove("hide");
+  };
   allButton.classList.remove("is-active");
   htmlButton.classList.remove("is-active");
   cssButton.classList.add("is-active");
@@ -66,7 +70,9 @@ function showCssCards() {
 }
 
 function showJsCards() {
-  showAll();
+  for(i = 0; i < 5; i++) {
+    jsCards[i].classList.remove("hide");
+  };
   allButton.classList.remove("is-active");
   htmlButton.classList.remove("is-active");
   cssButton.classList.remove("is-active");
@@ -99,14 +105,11 @@ function showAll() {
   htmlButton.classList.remove("is-active");
   cssButton.classList.remove("is-active");
   jsButton.classList.remove("is-active");
-  htmlCards.forEach(function(item){
-    item.classList.remove("hide");
+  allCards.forEach(function(item){
+    item.classList.add("hide");
   });
-  cssCards.forEach(function(item){
-    item.classList.remove("hide");
-  });
-  jsCards.forEach(function(item){
-    item.classList.remove("hide");
-  });
+  for(i = 0; i < 5; i++) {
+    allCards[i].classList.remove("hide");
+  };
   showPagedSection();
 }
