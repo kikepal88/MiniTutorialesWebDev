@@ -85,3 +85,284 @@ function showPagedSection() {
 }
 
 showPagedSection()
+
+function changePages(page) {
+  let classOfAllButton = allButton.getAttribute('class');
+  let classOfHtmlButton = htmlButton.getAttribute('class');
+  let classOfCssButton = cssButton.getAttribute('class');
+  let classOfJsButton = jsButton.getAttribute('class');
+  console.log(page);
+  if(classOfAllButton === "buttons__all is-active"){
+    switch(page) {
+      case 0:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        allCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 0; i < 5; i++) {
+          allCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 1:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        allCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 5; i < 10; i++) {
+          allCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 2:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        allCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 10; i < 15; i++) {
+          allCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 3:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        allCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 15; i < 20; i++) {
+          allCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 4:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        allCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 20; i < 25; i++) {
+          allCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+    }
+  } else if(classOfHtmlButton === "buttons__html is-active"){
+    switch(page) {
+      case 0:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        htmlCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 0; i < 5; i++) {
+          htmlCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 1:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        htmlCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 5; i < 10; i++) {
+          htmlCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 2:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        htmlCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 10; i < 15; i++) {
+          htmlCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 3:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        htmlCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 15; i < 20; i++) {
+          htmlCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 4:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        htmlCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 20; i < 25; i++) {
+          htmlCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+    }
+  } else if(classOfCssButton === "buttons__css is-active"){
+    switch(page) {
+      case 0:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        cssCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 0; i < 5; i++) {
+          cssCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 1:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        cssCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 5; i < 10; i++) {
+          cssCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 2:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        cssCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 10; i < 15; i++) {
+          cssCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 3:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        cssCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 15; i < 20; i++) {
+          cssCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 4:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        cssCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 20; i < 25; i++) {
+          cssCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+    }
+  } else if(classOfJsButton === "buttons__js is-active"){
+    switch(page) {
+      case 0:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        jsCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 0; i < 5; i++) {
+          jsCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 1:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        jsCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 5; i < 10; i++) {
+          jsCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 2:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        jsCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 10; i < 15; i++) {
+          jsCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 3:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        jsCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 15; i < 20; i++) {
+          jsCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+      case 4:
+        numberOfPages.forEach(function(item){
+          item.classList.remove("actived");
+        });
+        numberOfPages[page].classList.add("actived");
+        jsCards.forEach(function(item){
+          item.classList.add("hide");
+        });
+        for(i = 20; i < 25; i++) {
+          jsCards[i].classList.remove("hide");
+        };
+        console.log(page);
+        break;
+    }
+  }
+};
