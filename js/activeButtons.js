@@ -7,10 +7,15 @@ const htmlCards = Array.from(document.querySelectorAll(".HTML"));
 const cssCards = Array.from(document.querySelectorAll(".CSS"));
 const jsCards = Array.from(document.querySelectorAll(".JS"));
 
-function showHtmlCards() {
-  for(i = 0; i < 5; i++) {
-    htmlCards[i].classList.remove("hide");
+// Esta función es para mostrar solo 5 cards de cada tecnologia
+function showFiveCards(tecnology, firstCard, lastCard) {
+  for(i = firstCard; i < lastCard; i++) {
+    tecnology[i].classList.remove("hide");
   };
+}
+
+function showHtmlCards() {
+  showFiveCards(htmlCards, 0, 5);
   allButton.classList.remove("is-active");
   htmlButton.classList.add("is-active");
   cssButton.classList.remove("is-active");
@@ -43,9 +48,7 @@ function showHtmlCards() {
 }
 
 function showCssCards() {
-  for(i = 0; i < 5; i++) {
-    cssCards[i].classList.remove("hide");
-  };
+  showFiveCards(cssCards, 0, 5);
   allButton.classList.remove("is-active");
   htmlButton.classList.remove("is-active");
   cssButton.classList.add("is-active");
@@ -78,9 +81,7 @@ function showCssCards() {
 }
 
 function showJsCards() {
-  for(i = 0; i < 5; i++) {
-    jsCards[i].classList.remove("hide");
-  };
+  showFiveCards(jsCards, 0, 5);
   allButton.classList.remove("is-active");
   htmlButton.classList.remove("is-active");
   cssButton.classList.remove("is-active");
@@ -120,9 +121,7 @@ function showAll() {
   allCards.forEach(function(item){
     item.classList.add("hide");
   });
-  for(i = 0; i < 5; i++) {
-    allCards[i].classList.remove("hide");
-  };
+  showFiveCards(allCards, 0, 5);
   showPagedSection();
   numberOfPages.forEach(function(item){
     item.classList.remove("actived");

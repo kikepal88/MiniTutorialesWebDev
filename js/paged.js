@@ -91,7 +91,6 @@ function changePages(page) {
   let classOfHtmlButton = htmlButton.getAttribute('class');
   let classOfCssButton = cssButton.getAttribute('class');
   let classOfJsButton = jsButton.getAttribute('class');
-  console.log(page);
   if(classOfAllButton === "buttons__all is-active"){
     switch(page) {
       case 0:
@@ -102,10 +101,7 @@ function changePages(page) {
         allCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 0; i < 5; i++) {
-          allCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(allCards, 0, 5);
         break;
       case 1:
         numberOfPages.forEach(function(item){
@@ -115,10 +111,7 @@ function changePages(page) {
         allCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 5; i < 10; i++) {
-          allCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(allCards, 5, 10);
         break;
       case 2:
         numberOfPages.forEach(function(item){
@@ -128,10 +121,7 @@ function changePages(page) {
         allCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 10; i < 15; i++) {
-          allCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(allCards, 10, 15);
         break;
       case 3:
         numberOfPages.forEach(function(item){
@@ -141,10 +131,7 @@ function changePages(page) {
         allCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 15; i < 20; i++) {
-          allCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(allCards, 15, 20);
         break;
       case 4:
         numberOfPages.forEach(function(item){
@@ -154,10 +141,7 @@ function changePages(page) {
         allCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 20; i < 25; i++) {
-          allCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(allCards, 20, 25);
         break;
     }
   } else if(classOfHtmlButton === "buttons__html is-active"){
@@ -170,10 +154,7 @@ function changePages(page) {
         htmlCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 0; i < 5; i++) {
-          htmlCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(htmlCards, 0, 5);
         break;
       case 1:
         numberOfPages.forEach(function(item){
@@ -183,10 +164,7 @@ function changePages(page) {
         htmlCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 5; i < 10; i++) {
-          htmlCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(htmlCards, 5, 10);
         break;
       case 2:
         numberOfPages.forEach(function(item){
@@ -196,10 +174,7 @@ function changePages(page) {
         htmlCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 10; i < 15; i++) {
-          htmlCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(htmlCards, 10, 15);
         break;
       case 3:
         numberOfPages.forEach(function(item){
@@ -209,10 +184,7 @@ function changePages(page) {
         htmlCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 15; i < 20; i++) {
-          htmlCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(htmlCards, 15, 20);
         break;
       case 4:
         numberOfPages.forEach(function(item){
@@ -222,10 +194,7 @@ function changePages(page) {
         htmlCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 20; i < 25; i++) {
-          htmlCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(htmlCards, 20, 25);
         break;
     }
   } else if(classOfCssButton === "buttons__css is-active"){
@@ -238,10 +207,7 @@ function changePages(page) {
         cssCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 0; i < 5; i++) {
-          cssCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(cssCards, 0, 5);
         break;
       case 1:
         numberOfPages.forEach(function(item){
@@ -251,10 +217,7 @@ function changePages(page) {
         cssCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 5; i < 10; i++) {
-          cssCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(cssCards, 5, 10);
         break;
       case 2:
         numberOfPages.forEach(function(item){
@@ -264,10 +227,7 @@ function changePages(page) {
         cssCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 10; i < 15; i++) {
-          cssCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(cssCards, 10, 15);
         break;
       case 3:
         numberOfPages.forEach(function(item){
@@ -277,10 +237,7 @@ function changePages(page) {
         cssCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 15; i < 20; i++) {
-          cssCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(cssCards, 15, 20);
         break;
       case 4:
         numberOfPages.forEach(function(item){
@@ -290,10 +247,7 @@ function changePages(page) {
         cssCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 20; i < 25; i++) {
-          cssCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(cssCards, 20, 25);
         break;
     }
   } else if(classOfJsButton === "buttons__js is-active"){
@@ -306,10 +260,7 @@ function changePages(page) {
         jsCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 0; i < 5; i++) {
-          jsCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(jsCards, 0, 5);
         break;
       case 1:
         numberOfPages.forEach(function(item){
@@ -319,10 +270,7 @@ function changePages(page) {
         jsCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 5; i < 10; i++) {
-          jsCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(jsCards, 5, 10);
         break;
       case 2:
         numberOfPages.forEach(function(item){
@@ -332,10 +280,7 @@ function changePages(page) {
         jsCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 10; i < 15; i++) {
-          jsCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(jsCards, 10, 15);
         break;
       case 3:
         numberOfPages.forEach(function(item){
@@ -345,10 +290,7 @@ function changePages(page) {
         jsCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 15; i < 20; i++) {
-          jsCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(jsCards, 15, 20);
         break;
       case 4:
         numberOfPages.forEach(function(item){
@@ -358,10 +300,7 @@ function changePages(page) {
         jsCards.forEach(function(item){
           item.classList.add("hide");
         });
-        for(i = 20; i < 25; i++) {
-          jsCards[i].classList.remove("hide");
-        };
-        console.log(page);
+        showFiveCards(jsCards, 20, 25);
         break;
     }
   }
