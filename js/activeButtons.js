@@ -7,19 +7,24 @@ const htmlCards = Array.from(document.querySelectorAll(".HTML"));
 const cssCards = Array.from(document.querySelectorAll(".CSS"));
 const jsCards = Array.from(document.querySelectorAll(".JS"));
 
-// Esta función es para mostrar solo 5 cards de cada tecnologia
+// Está función es para mostrar solo 5 cards de cada tecnologia
 function showFiveCards(tecnology, firstCard, lastCard) {
   for(i = firstCard; i < lastCard; i++) {
     tecnology[i].classList.remove("hide");
   };
 }
 
+// Está función es para activar los estilos del boton de tecnologia que se active
+function activeTecnologyButton(activate, deactivate1, deactivate2, deactivate3) {
+  activate.classList.add("is-active");
+  deactivate1.classList.remove("is-active");
+  deactivate2.classList.remove("is-active");
+  deactivate3.classList.remove("is-active");
+}
+
 function showHtmlCards() {
   showFiveCards(htmlCards, 0, 5);
-  allButton.classList.remove("is-active");
-  htmlButton.classList.add("is-active");
-  cssButton.classList.remove("is-active");
-  jsButton.classList.remove("is-active");
+  activeTecnologyButton(htmlButton, allButton, cssButton, jsButton);
   cssCards.forEach(function(item){
     let aditionalCategory1 = item.getAttribute('data-key');
     let aditionalCategory2 = item.getAttribute('data-key2');
@@ -49,10 +54,7 @@ function showHtmlCards() {
 
 function showCssCards() {
   showFiveCards(cssCards, 0, 5);
-  allButton.classList.remove("is-active");
-  htmlButton.classList.remove("is-active");
-  cssButton.classList.add("is-active");
-  jsButton.classList.remove("is-active");
+  activeTecnologyButton(cssButton, allButton, htmlButton, jsButton);
   htmlCards.forEach(function(item){
     let aditionalCategory1 = item.getAttribute('data-key');
     let aditionalCategory2 = item.getAttribute('data-key2');
@@ -82,10 +84,7 @@ function showCssCards() {
 
 function showJsCards() {
   showFiveCards(jsCards, 0, 5);
-  allButton.classList.remove("is-active");
-  htmlButton.classList.remove("is-active");
-  cssButton.classList.remove("is-active");
-  jsButton.classList.add("is-active");
+  activeTecnologyButton(jsButton, allButton, cssButton, htmlButton);
   htmlCards.forEach(function(item){
     let aditionalCategory1 = item.getAttribute('data-key');
     let aditionalCategory2 = item.getAttribute('data-key2');
@@ -114,10 +113,7 @@ function showJsCards() {
 }
 
 function showAll() {
-  allButton.classList.add("is-active");
-  htmlButton.classList.remove("is-active");
-  cssButton.classList.remove("is-active");
-  jsButton.classList.remove("is-active");
+  activeTecnologyButton(allButton, htmlButton, cssButton, jsButton);
   allCards.forEach(function(item){
     item.classList.add("hide");
   });
