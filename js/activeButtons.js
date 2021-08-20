@@ -36,6 +36,10 @@ function showHtmlCards() {
     }
   });
   showPagedSection();
+  numberOfPages.forEach(function(item){
+    item.classList.remove("actived");
+  });
+  numberOfPages[0].classList.add("actived");
 }
 
 function showCssCards() {
@@ -67,6 +71,10 @@ function showCssCards() {
     }
   });
   showPagedSection();
+  numberOfPages.forEach(function(item){
+    item.classList.remove("actived");
+  });
+  numberOfPages[0].classList.add("actived");
 }
 
 function showJsCards() {
@@ -98,6 +106,10 @@ function showJsCards() {
     }
   });
   showPagedSection();
+  numberOfPages.forEach(function(item){
+    item.classList.remove("actived");
+  });
+  numberOfPages[0].classList.add("actived");
 }
 
 function showAll() {
@@ -112,4 +124,8 @@ function showAll() {
     allCards[i].classList.remove("hide");
   };
   showPagedSection();
+  numberOfPages.forEach(function(item){
+    item.classList.remove("actived");
+  });
+  numberOfPages[0].classList.add("actived");
 }
