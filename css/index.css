@@ -494,6 +494,19 @@ main {
   width: 100%;
   height: auto;
 }
+.avatar__image {
+  width: 90%;
+  margin: 15px auto 5px;
+  border: 2px solid var(--Color-variante);
+  border-radius: 15px;
+  background-color: var(--Color-primario);
+  overflow: hidden;
+}
+.avatar__image img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
 .avatar__social-media article {
   display: flex;
   justify-content: center;
@@ -507,19 +520,6 @@ main {
   border-radius: 50%;
 }
 .avatar__social-media article img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-.avatar__image {
-  width: 90%;
-  margin: 5px auto 15px;
-  border: 2px solid var(--Color-variante);
-  border-radius: 15px;
-  background-color: var(--Color-primario);
-  overflow: hidden;
-}
-.avatar__image img {
   display: block;
   width: 100%;
   object-fit: cover;
