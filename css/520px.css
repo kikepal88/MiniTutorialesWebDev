@@ -1,0 +1,8 @@
+/* ---------- MAIN -------------- */
+
+.hero__description h2 {
+  margin-block-end: 300px;
+}
+.hero__description p {
+  margin-block-end: 20px;
+}

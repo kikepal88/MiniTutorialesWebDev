@@ -171,7 +171,9 @@ main {
   height: auto;
 }
 .hero__description img {
+  display: block;
   width: 100%;
+  object-fit: cover;
 }
 .hero__description h2 {
   width: 100%;
@@ -556,8 +558,8 @@ footer {
 }
 .by__logoMTWD img {
   display: block;
-  max-width: 380px;
-  width: 100%;
+  max-width: 320px;
+  width: 80%;
   margin: 0 auto;
   object-fit: cover;
 }
@@ -567,8 +569,8 @@ footer {
 }
 .by__logoKike img {
   display: block;
-  max-width: 250px;
-  width: 70%;
+  max-width: 200px;
+  width: 50%;
   margin: 0 auto;
   object-fit: cover;
 }

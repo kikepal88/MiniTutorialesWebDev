@@ -1,0 +1,10 @@
+/* ---------- MAIN -------------- */
+
+.hero__description h2 {
+  width: 87%;
+  margin: 10px auto 400px;
+}
+.hero__description p {
+  width: 85%;
+  margin: 0 auto 40px;
+}

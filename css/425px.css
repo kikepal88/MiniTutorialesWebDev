@@ -1,0 +1,13 @@
+.header__nav li {
+  max-width: 310px;
+}
+
+/* ---------- MAIN -------------- */
+
+.hero__description img {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.hero__description h2 {
+  margin-block-end: 260px;
+}
