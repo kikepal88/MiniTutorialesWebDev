@@ -196,6 +196,7 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  max-width: 350px;
   width: 90%;
   height: auto;
   margin-block-start: 5px;
@@ -319,9 +320,11 @@ main {
   height: auto;
 }
 .tutorials__cards {
+  max-width: 400px;
   width: 100%;
   height: auto;
   margin-block-end: 15px;
+  margin: 0 auto 15px;
   padding: 15px;
   color: var(--Color-claro);
   background-color: var(--Color-complemento);
@@ -413,7 +416,7 @@ main {
   width: 900%;
 }
 .img__container {
-  max-width: 360px;
+  /* max-width: 360px; */
   width: 100%;
   height: auto;
 }
@@ -458,6 +461,7 @@ main {
 }
 
 .main__about {
+  max-width: 400px;
   width: 91%;
   margin: 0 auto;
   height: auto;
@@ -470,6 +474,7 @@ main {
   width: 100%;
 }
 .about__logo {
+  max-width: 300px;
   width: 90%;
   margin: 10px auto;
 }
@@ -525,7 +530,9 @@ main {
   object-fit: cover;
 }
 .about__description {
+  max-width: 360px;
   width: 100%;
+  margin: 0 auto;
 }
 .about__description p span {
   color: var(--Color-variante);
@@ -549,7 +556,9 @@ footer {
 }
 .by__logoMTWD img {
   display: block;
+  max-width: 380px;
   width: 100%;
+  margin: 0 auto;
   object-fit: cover;
 }
 .by__logoKike {
@@ -558,6 +567,7 @@ footer {
 }
 .by__logoKike img {
   display: block;
+  max-width: 250px;
   width: 70%;
   margin: 0 auto;
   object-fit: cover;
