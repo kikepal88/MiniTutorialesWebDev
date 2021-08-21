@@ -531,3 +531,38 @@ main {
   color: var(--Color-variante);
   font-weight: 600;
 }
+
+footer {
+  width: 100vw;
+  height: auto;
+  margin-block-start: 20px;
+  text-align: center;
+  border-block-start: 1px solid var(--Color-complemento);
+}
+.footer__by {
+  width: 100%;
+  height: auto;
+}
+.by__logoMTWD {
+  width: 100%;
+  margin-block-end: 5px;
+}
+.by__logoMTWD img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.by__logoKike {
+  width: 100%;
+  margin-block-start: 5px;
+}
+.by__logoKike img {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.footer__copy {
+  width: 100%;
+  padding-block-start: 0;
+}
