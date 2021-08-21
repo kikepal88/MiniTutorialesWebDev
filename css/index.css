@@ -75,6 +75,7 @@ section {
 header {
   width: 100vw;
   height: 50px;
+  border-block-end: 1px solid var(--Color-complemento);
 }
 .header__section {
   position: relative;
@@ -92,7 +93,9 @@ header {
   width: 170px;
 }
 .header__logo img {
+  display: block;
   width: 100%;
+  object-fit: cover;
 }
 .header__icon-menu {
   width: 20px;
@@ -418,7 +421,6 @@ main {
   width: 900%;
 }
 .img__container {
-  /* max-width: 360px; */
   width: 100%;
   height: auto;
 }
@@ -466,7 +468,6 @@ main {
   max-width: 400px;
   width: 91%;
   margin: 0 auto;
-  height: auto;
   background-color: var(--Color-complemento);
   border: 1px solid var(--Color-variante);
   border-radius: 10px;
@@ -540,6 +541,8 @@ main {
   color: var(--Color-variante);
   font-weight: 600;
 }
+
+/* ---------- FOOTER -------------- */
 
 footer {
   width: 100vw;

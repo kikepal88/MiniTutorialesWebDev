@@ -1,0 +1,66 @@
+.header__section {
+  position: initial;
+}
+.header__logo {
+  width: 210px;
+}
+.header__section i {
+  display: none;
+}
+.header__nav {
+  position: initial;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  width: 70%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  color: var(--Color-claro);
+  background-color: initial;
+}
+.header__nav ul {
+  position: initial;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+.header__nav li {
+  width: auto;
+  margin: 0 10px;
+  padding: 0;
+  background-color: initial;
+  border: none;
+  border-radius: none;
+  list-style: none;
+  cursor: pointer;
+}
+.header__nav a {
+  color: var(--Color-claro);
+  text-decoration: none;
+}
+
+/* ---------- MAIN -------------- */
+
+.main__hero {
+  background-image: url(../assets/images/Hero2_M_efecto_red3.jpg);
+}
+.hero__description img {
+  max-width: 400px;
+  margin: 0 0 20px;
+}
+.hero__description h2 {
+  width: 45%;
+  margin: 10px 0 20px 0;
+}
+.hero__description p {
+  width: 45%;
+  margin: 0 0 70px;
+}
+
+.buttons__container button {
+  max-width: 370px;
+}
