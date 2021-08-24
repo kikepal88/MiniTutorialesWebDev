@@ -30,7 +30,9 @@ header {
 
 .header__section {
   position: initial;
+  max-width: 768px;
   height: 100%;
+  margin: 0 auto;
 }
 .header__logo {
   width: 250px;
@@ -38,6 +40,10 @@ header {
 
 /* ---------- MAIN -------------- */
 
+.hero__description {
+  max-width: 738px;
+  margin: 0 auto;
+}
 .hero__description p {
   margin: 0 0 100px;
 }
