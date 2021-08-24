@@ -45,6 +45,8 @@ header {
 .buttons__container {
   display: flex;
   justify-content: space-between;
+  max-width: 738px;
+  margin: 0 auto;
 }
 .buttons__container button {
   max-width: 175px;
@@ -55,7 +57,7 @@ header {
 }
 
 .tutorials__cards {
-  max-width: initial;
+  max-width: 738px;
 }
 .cards__head {
   display: flex;
@@ -71,6 +73,12 @@ header {
   margin-block-end: 20px;
   order: 1;
 }
+.head__title div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 .head__title img {
   margin-inline-start: 10px;
 }
@@ -85,9 +93,7 @@ header {
 
 .img__container {
   max-width: 350px;
-  /* revisar el ancho max en funcion de porcentaje cuando aumente la pantalla */
   width: 100%;
-  height: auto;
   margin-inline-end: 10px;
 }
 
@@ -98,7 +104,8 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   max-width: initial;
-  width: 95%;
+  max-width: 738px;
+  width: 95.5%;
   max-height: 300px;
   height: 100%;
 }

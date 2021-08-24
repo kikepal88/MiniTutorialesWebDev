@@ -82,7 +82,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
 }
 .header__section.menu__is-active {
@@ -162,7 +162,7 @@ main {
 }
 
 .main__hero {
-  width: 100%;
+  width: 100vw;
   height: auto;
   background-image: url(../assets/images/Hero2_M_efecto_red2.jpg);
   background-position: center;
@@ -185,7 +185,7 @@ main {
 }
 
 .main__butttons {
-  width: 100%;
+  width: 100vw;
   height: auto;
 }
 .buttons__container {
@@ -273,7 +273,7 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  width: 90%;
+  width: 100vw;
   padding: 0 15px;
   height: auto;
   margin: 0 auto;
@@ -321,7 +321,7 @@ main {
 }
 
 .main__tutorials {
-  width: 100%;
+  width: 100vw;
   height: auto;
 }
 .tutorials__cards {
