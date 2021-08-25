@@ -372,6 +372,11 @@ main {
   border: 1px solid var(--Color-secundario);
   border-radius: 10px;
 }
+.head__button button:hover {
+  color: var(--Color-claro);
+  background-color: var(--Color-complemento);
+  border: 1px solid var(--Color-secundario);
+}
 .cards__tutorial-section {
   position: relative;
   width: 100%;

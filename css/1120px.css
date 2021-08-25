@@ -1,0 +1,110 @@
+section {
+  padding: 20px;
+}
+
+.header__section {
+  max-width: 1080px;
+}
+
+/* ---------- MAIN -------------- */
+
+.hero__description {
+  max-width: 1080px;
+}
+.hero__description img {
+  margin: 80px 0 30px;
+}
+.hero__description h2 {
+  width: 38%;
+  margin: 0 0 20px 0;
+}
+.hero__description p {
+  width: 38%;
+  margin: 0 0 200px;
+}
+
+.buttons__container {
+  max-width: 1080px;
+}
+.buttons__container button {
+  max-width: 260px;
+}
+
+.tutorials__cards {
+  max-width: 1080px;
+}
+.cards__head {
+  flex-wrap: nowrap;
+}
+.head__title {
+  justify-content: flex-start;
+  width: 20%;
+  margin: 0 20px 0 0;
+  order: initial;
+}
+.head__description {
+  margin: 0 20px 0 0;
+  order: initial;
+}
+.head__button {
+  width: 15%;
+  order: initial;
+}
+.head__button button {
+  max-width: 150px;
+  width: 100%;
+}
+
+.img__container {
+  max-width: 345px;
+  margin-inline-end: 5px;
+}
+
+.main__about {
+  max-width: 1080px;
+  width: 96%;
+  max-height: 270px;
+  padding: 30px 20px;
+}
+.about__name {
+  width: 73%;
+  margin: 20px 0;
+}
+.about__avatar {
+  width: 25%;
+}
+.avatar__image {
+  width: 70%;
+  margin: 0;
+  order: 2;
+}
+.avatar__social-media article {
+  margin: 5px;
+}
+.about__description {
+  max-width: initial;
+  width: 73%;
+  order: 2;
+}
+
+/* ---------- FOOTER -------------- */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 1080px;
+  margin: 20px auto 0;
+}
+
+.footer__by {
+  width: 70%;
+}
+.by__logoKike img {
+  width: 85%;
+}
+.footer__copy {
+  width: 28%;
+  padding: 0;
+}
