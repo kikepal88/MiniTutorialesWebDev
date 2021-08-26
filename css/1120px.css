@@ -28,6 +28,7 @@ section {
 }
 .buttons__container button {
   max-width: 260px;
+  padding: 10px 20px;
 }
 
 .tutorials__cards {
@@ -54,7 +55,6 @@ section {
   max-width: 150px;
   width: 100%;
 }
-
 .img__container {
   max-width: 345px;
   margin-inline-end: 5px;

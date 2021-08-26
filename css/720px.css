@@ -34,13 +34,18 @@
   padding: 0;
   background-color: initial;
   border: none;
-  border-radius: none;
+  border-radius: 0;
   list-style: none;
   cursor: pointer;
 }
+.header__nav li:hover {
+  color: var(--Color-secundario);
+}
 .header__nav a {
   color: var(--Color-claro);
-  text-decoration: none;
+}
+.header__nav a:hover {
+  color: var(--Color-secundario);
 }
 
 /* ---------- MAIN -------------- */

@@ -1,0 +1,76 @@
+h1 {
+  font-size: var(--h1-size-g);
+  line-height: calc(var(--h1-size-g) * 1.3);
+}
+h2 {
+  font-size: var(--h3-size-g);
+  line-height: calc(var(--h3-size-g) * 1.3);
+}
+h3 {
+  font-size: var(--h4-size-g);
+  line-height: calc(var(--h4-size-g) * 1.3);
+}
+h4 {
+  font-size: var(--h4-size-g);
+  line-height: calc(var(--h4-size-g) * 1.3);
+}
+p {
+  font-size: var(--p-size-g);
+  line-height: calc(var(--p-size-g) * 1.3);
+}
+
+header {
+  height: 90px;
+}
+
+.header__section {
+  max-width: 1155px;
+}
+.header__logo {
+  width: 300px;
+}
+
+/* ---------- MAIN -------------- */
+
+.main__hero {
+  background-image: url(../assets/images/Hero2_G_efecto.jpg);
+}
+.hero__description {
+  max-width: 1155px;
+}
+.hero__description img {
+  max-width: 420px;
+}
+.hero__description h2 {
+  width: 35%;
+}
+.hero__description p {
+  width: 35%;
+}
+
+.buttons__container {
+  max-width: 1155px;
+}
+.buttons__container button {
+  max-width: 270px;
+}
+
+.tutorials__cards {
+  max-width: 1155px;
+}
+.img__container {
+  max-width: 370px;
+}
+
+.main__about {
+  max-width: 1155px;
+}
+.about__description {
+  width: 68%;
+}
+
+/* ---------- FOOTER -------------- */
+
+footer {
+  max-width: 1155px;
+}

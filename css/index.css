@@ -213,6 +213,7 @@ main {
   border: 1px solid var(--Color-variante);
   border-radius: 10px;
   box-shadow: 1px 1px 5px var(--Color-variante);
+  cursor: pointer;
 }
 .buttons__container button:hover {
   border: 1px solid var(--Color-secundario);
@@ -371,6 +372,7 @@ main {
   background-color: var(--Color-claro);
   border: 1px solid var(--Color-secundario);
   border-radius: 10px;
+  cursor: pointer;
 }
 .head__button button:hover {
   color: var(--Color-claro);
