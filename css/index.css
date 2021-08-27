@@ -535,6 +535,9 @@ main {
   border: 2px solid var(--Color-variante);
   border-radius: 50%;
 }
+.avatar__social-media article:hover {
+  background-color: var(--Color-claro);
+}
 .avatar__social-media article img {
   display: block;
   width: 100%;

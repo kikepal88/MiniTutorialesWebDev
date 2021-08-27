@@ -1,0 +1,43 @@
+.header__section {
+  max-width: 1245px;
+}
+
+/* ---------- MAIN -------------- */
+
+.hero__description {
+  max-width: 1245px;
+}
+.hero__description img {
+  margin: 130px 0 30px;
+}
+.hero__description h2 {
+  width: 30%;
+}
+.hero__description p {
+  width: 30%;
+  margin: 0 0 260px;
+}
+
+.buttons__container {
+  max-width: 1245px;
+}
+.buttons__container button {
+  max-width: 290px;
+}
+
+.tutorials__cards {
+  max-width: 1245px;
+}
+.img__container {
+  max-width: 400px;
+}
+
+.main__about {
+  max-width: 1245px;
+}
+
+/* ---------- FOOTER -------------- */
+
+footer {
+  max-width: 1245px;
+}
