@@ -430,6 +430,7 @@ main {
 .img__container {
   width: 100%;
   height: auto;
+  border: 2px solid var(--Color-primario);
 }
 .img__container img {
   display: block;

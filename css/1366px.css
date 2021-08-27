@@ -1,0 +1,36 @@
+.header__section {
+  max-width: 1215px;
+}
+
+/* ---------- MAIN -------------- */
+
+.hero__description {
+  max-width: 1215px;
+}
+
+.buttons__container {
+  max-width: 1215px;
+}
+.buttons__container button {
+  max-width: 290px;
+}
+
+.tutorials__cards {
+  max-width: 1215px;
+}
+.img__container {
+  max-width: 390px;
+}
+
+.main__about {
+  max-width: 1215px;
+}
+
+/* ---------- FOOTER -------------- */
+
+footer {
+  max-width: 1215px;
+}
+.footer__by {
+  justify-content: flex-start;
+}
