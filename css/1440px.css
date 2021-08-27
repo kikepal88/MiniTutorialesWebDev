@@ -1,13 +1,12 @@
 /* ---------- MAIN -------------- */
 
 .hero__description img {
-  margin: 30px 0 40px;
+  margin: 90px 0 30px;
 }
 .hero__description h2 {
-  width: 42%;
-  margin: 0 0 20px 0;
+  width: 33%;
 }
 .hero__description p {
-  width: 42%;
-  margin: 0 0 170px;
+  width: 33%;
+  margin: 0 0 200px;
 }
