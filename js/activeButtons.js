@@ -36,16 +36,21 @@ function showIfSecondCatergory(cards, firstCategory, secondCategory) {
   });
 }
 
+// Está función para activar el estilo del boton 1 de paginas y apagar los demas
+function activeStylesPage1Button() {
+  numberOfPages.forEach(function(item){
+    item.classList.remove("actived");
+  });
+  numberOfPages[0].classList.add("actived");
+}
+
 function showHtmlCards() {
   showFiveCards(htmlCards, 0, 5);
   activeTecnologyButton(htmlButton, allButton, cssButton, jsButton);
   showIfSecondCatergory(cssCards, "CSS", "HTML")
   showIfSecondCatergory(jsCards, "JS", "HTML")
   showPagedSection();
-  numberOfPages.forEach(function(item){
-    item.classList.remove("actived");
-  });
-  numberOfPages[0].classList.add("actived");
+  activeStylesPage1Button()
 }
 
 function showCssCards() {
@@ -54,10 +59,7 @@ function showCssCards() {
   showIfSecondCatergory(htmlCards, "HTML", "CSS")
   showIfSecondCatergory(jsCards, "JS", "CSS")
   showPagedSection();
-  numberOfPages.forEach(function(item){
-    item.classList.remove("actived");
-  });
-  numberOfPages[0].classList.add("actived");
+  activeStylesPage1Button()
 }
 
 function showJsCards() {
@@ -66,10 +68,7 @@ function showJsCards() {
   showIfSecondCatergory(htmlCards, "HTML", "JS")
   showIfSecondCatergory(cssCards, "CSS", "JS")
   showPagedSection();
-  numberOfPages.forEach(function(item){
-    item.classList.remove("actived");
-  });
-  numberOfPages[0].classList.add("actived");
+  activeStylesPage1Button()
 }
 
 function showAll() {
@@ -79,8 +78,5 @@ function showAll() {
   });
   showFiveCards(allCards, 0, 5);
   showPagedSection();
-  numberOfPages.forEach(function(item){
-    item.classList.remove("actived");
-  });
-  numberOfPages[0].classList.add("actived");
+  activeStylesPage1Button()
 }
