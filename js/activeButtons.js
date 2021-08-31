@@ -22,29 +22,25 @@ function activeTecnologyButton(activate, deactivate1, deactivate2, deactivate3) 
   deactivate3.classList.remove("is-active");
 }
 
+// Está función es para ocultar si no tiene segunda tecnologia que coincida
+function showIfSecondCatergory(cards, firstCategory, secondCategory) {
+  cards.forEach(function(item){
+    let aditionalCategory1 = item.getAttribute('data-key');
+    let aditionalCategory2 = item.getAttribute('data-key2');
+    if(aditionalCategory1 === firstCategory) {
+      if(aditionalCategory2 === secondCategory) {
+      } else {
+        item.classList.add("hide");
+      }
+    }
+  });
+}
+
 function showHtmlCards() {
   showFiveCards(htmlCards, 0, 5);
   activeTecnologyButton(htmlButton, allButton, cssButton, jsButton);
-  cssCards.forEach(function(item){
-    let aditionalCategory1 = item.getAttribute('data-key');
-    let aditionalCategory2 = item.getAttribute('data-key2');
-    if(aditionalCategory1 === "CSS") {
-      if(aditionalCategory2 === "HMTL") {
-      } else {
-        item.classList.add("hide");
-      }
-    }
-  });
-  jsCards.forEach(function(item){
-    let aditionalCategory1 = item.getAttribute('data-key');
-    let aditionalCategory2 = item.getAttribute('data-key2');
-    if(aditionalCategory1 === "JS") {
-      if(aditionalCategory2 === "HTML") {
-      } else {
-        item.classList.add("hide");
-      }
-    }
-  });
+  showIfSecondCatergory(cssCards, "CSS", "HTML")
+  showIfSecondCatergory(jsCards, "JS", "HTML")
   showPagedSection();
   numberOfPages.forEach(function(item){
     item.classList.remove("actived");
@@ -55,26 +51,8 @@ function showHtmlCards() {
 function showCssCards() {
   showFiveCards(cssCards, 0, 5);
   activeTecnologyButton(cssButton, allButton, htmlButton, jsButton);
-  htmlCards.forEach(function(item){
-    let aditionalCategory1 = item.getAttribute('data-key');
-    let aditionalCategory2 = item.getAttribute('data-key2');
-    if(aditionalCategory1 === "HTML") {
-      if(aditionalCategory2 === "CSS") {
-      } else {
-        item.classList.add("hide");
-      }
-    }
-  });
-  jsCards.forEach(function(item){
-    let aditionalCategory1 = item.getAttribute('data-key');
-    let aditionalCategory2 = item.getAttribute('data-key2');
-    if(aditionalCategory1 === "JS") {
-      if(aditionalCategory2 === "CSS") {
-      } else {
-        item.classList.add("hide");
-      }
-    }
-  });
+  showIfSecondCatergory(htmlCards, "HTML", "CSS")
+  showIfSecondCatergory(jsCards, "JS", "CSS")
   showPagedSection();
   numberOfPages.forEach(function(item){
     item.classList.remove("actived");
@@ -85,26 +63,8 @@ function showCssCards() {
 function showJsCards() {
   showFiveCards(jsCards, 0, 5);
   activeTecnologyButton(jsButton, allButton, cssButton, htmlButton);
-  htmlCards.forEach(function(item){
-    let aditionalCategory1 = item.getAttribute('data-key');
-    let aditionalCategory2 = item.getAttribute('data-key2');
-    if(aditionalCategory1 === "HTML") {
-      if(aditionalCategory2 === "JS") {
-      } else {
-        item.classList.add("hide");
-      }
-    }
-  });
-  cssCards.forEach(function(item){
-    let aditionalCategory1 = item.getAttribute('data-key');
-    let aditionalCategory2 = item.getAttribute('data-key2');
-    if(aditionalCategory1 === "CSS") {
-      if(aditionalCategory2 === "JS") {
-      } else {
-        item.classList.add("hide");
-      }
-    }
-  });
+  showIfSecondCatergory(htmlCards, "HTML", "JS")
+  showIfSecondCatergory(cssCards, "CSS", "JS")
   showPagedSection();
   numberOfPages.forEach(function(item){
     item.classList.remove("actived");
