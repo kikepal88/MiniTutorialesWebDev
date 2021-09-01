@@ -14,7 +14,7 @@ function showFiveCards(tecnology, firstCard, lastCard) {
   };
 }
 
-// Está función es para activar los estilos del boton de tecnologia que se active
+// Está función es para activar los estilos del boton de la tecnologia que se active
 function activeTecnologyButton(activate, deactivate1, deactivate2, deactivate3) {
   activate.classList.add("is-active");
   deactivate1.classList.remove("is-active");
@@ -22,7 +22,7 @@ function activeTecnologyButton(activate, deactivate1, deactivate2, deactivate3) 
   deactivate3.classList.remove("is-active");
 }
 
-// Está función es para ocultar si no tiene segunda tecnologia que coincida
+// Está función es para ocultar cards si no tiene segunda tecnologia que coincida
 function showIfSecondCatergory(cards, firstCategory, secondCategory) {
   cards.forEach(function(item){
     let aditionalCategory1 = item.getAttribute('data-key');
