@@ -29,6 +29,16 @@ function showPagedSectionForTecnology(length) {
   }
 }
 
+//Está función es para ocultar todos los botones de las paginas en tecnologias
+//Se incluye la anterior función para que se active la sección de paginado
+function hidePagesButtons(length) {
+  numberOfPages[1].classList.add("hide");
+  numberOfPages[2].classList.add("hide");
+  numberOfPages[3].classList.add("hide");
+  numberOfPages[4].classList.add("hide");
+  showPagedSectionForTecnology(length);
+}
+
 function showPagedSection() {
   let classOfAllButton = allButton.getAttribute('class');
   let classOfHtmlButton = htmlButton.getAttribute('class');
@@ -37,23 +47,11 @@ function showPagedSection() {
   if(classOfAllButton === "buttons__all is-active"){
     showPagedSectionForTecnology(quantityAllCards);
   } else if(classOfHtmlButton === "buttons__html is-active"){
-    numberOfPages[1].classList.add("hide");
-    numberOfPages[2].classList.add("hide");
-    numberOfPages[3].classList.add("hide");
-    numberOfPages[4].classList.add("hide");
-    showPagedSectionForTecnology(quantityHtmlCards);
+    hidePagesButtons(quantityHtmlCards);
   } else if(classOfCssButton === "buttons__css is-active"){
-    numberOfPages[1].classList.add("hide");
-    numberOfPages[2].classList.add("hide");
-    numberOfPages[3].classList.add("hide");
-    numberOfPages[4].classList.add("hide");
-    showPagedSectionForTecnology(quantityCssCards);
+    hidePagesButtons(quantityCssCards);
   } else if(classOfJsButton === "buttons__js is-active"){
-    numberOfPages[1].classList.add("hide");
-    numberOfPages[2].classList.add("hide");
-    numberOfPages[3].classList.add("hide");
-    numberOfPages[4].classList.add("hide");
-    showPagedSectionForTecnology(quantityJsCards);
+    hidePagesButtons(quantityJsCards);
   }
 }
 
