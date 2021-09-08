@@ -57,6 +57,18 @@ function showPagedSection() {
 
 showPagedSection()
 
+//Está función es para activar el paginado, estilos de los botones y cambiar los cards
+function activePaged(tecnology, numberPage, firstRange, secondRange) {
+  numberOfPages.forEach(function(item){
+    item.classList.remove("actived");
+  });
+  numberOfPages[numberPage].classList.add("actived");
+  tecnology.forEach(function(item){
+    item.classList.add("hide");
+  });
+  showFiveCards(tecnology, firstRange, secondRange);
+}
+
 function changePages(page) {
   let classOfAllButton = allButton.getAttribute('class');
   let classOfHtmlButton = htmlButton.getAttribute('class');
@@ -65,213 +77,73 @@ function changePages(page) {
   if(classOfAllButton === "buttons__all is-active"){
     switch(page) {
       case 0:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        allCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(allCards, 0, 5);
+        activePaged(allCards, page, 0, 5);
         break;
       case 1:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        allCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(allCards, 5, 10);
+        activePaged(allCards, page, 5, 10);
         break;
       case 2:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        allCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(allCards, 10, 15);
+        activePaged(allCards, page, 10, 15);
         break;
       case 3:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        allCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(allCards, 15, 20);
+        activePaged(allCards, page, 15, 20);
         break;
       case 4:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        allCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(allCards, 20, 25);
+        activePaged(allCards, page, 20, 25);
         break;
     }
   } else if(classOfHtmlButton === "buttons__html is-active"){
     switch(page) {
       case 0:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        htmlCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(htmlCards, 0, 5);
+        activePaged(htmlCards, page, 0, 5);
         break;
       case 1:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        htmlCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(htmlCards, 5, 10);
+        activePaged(htmlCards, page, 5, 10);
         break;
       case 2:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        htmlCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(htmlCards, 10, 15);
+        activePaged(htmlCards, page, 10, 15);
         break;
       case 3:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        htmlCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(htmlCards, 15, 20);
+        activePaged(htmlCards, page, 15, 20);
         break;
       case 4:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        htmlCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(htmlCards, 20, 25);
+        activePaged(htmlCards, page, 20, 25);
         break;
     }
   } else if(classOfCssButton === "buttons__css is-active"){
     switch(page) {
       case 0:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        cssCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(cssCards, 0, 5);
+        activePaged(cssCards, page, 0, 5);
         break;
       case 1:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        cssCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(cssCards, 5, 10);
+        activePaged(cssCards, page, 5, 10);
         break;
       case 2:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        cssCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(cssCards, 10, 15);
+        activePaged(cssCards, page, 10, 15);
         break;
       case 3:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        cssCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(cssCards, 15, 20);
+        activePaged(cssCards, page, 15, 20);
         break;
       case 4:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        cssCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(cssCards, 20, 25);
+        activePaged(cssCards, page, 20, 25);
         break;
     }
   } else if(classOfJsButton === "buttons__js is-active"){
     switch(page) {
       case 0:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        jsCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(jsCards, 0, 5);
+        activePaged(jsCards, page, 0, 5);
         break;
       case 1:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        jsCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(jsCards, 5, 10);
+        activePaged(jsCards, page, 5, 10);
         break;
       case 2:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        jsCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(jsCards, 10, 15);
+        activePaged(jsCards, page, 10, 15);
         break;
       case 3:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        jsCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(jsCards, 15, 20);
+        activePaged(jsCards, page, 15, 20);
         break;
       case 4:
-        numberOfPages.forEach(function(item){
-          item.classList.remove("actived");
-        });
-        numberOfPages[page].classList.add("actived");
-        jsCards.forEach(function(item){
-          item.classList.add("hide");
-        });
-        showFiveCards(jsCards, 20, 25);
+        activePaged(jsCards, page, 20, 25);
         break;
     }
   }
