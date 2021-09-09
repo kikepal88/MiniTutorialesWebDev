@@ -10,6 +10,7 @@ const marksContainer = Array.from(document.getElementsByClassName("tutorial__ind
 const idMarksContainer = [];
 const changeMargin = 100;
 
+//Está función es para obtener cada uno de los ID de los DIV contenedores de imagenes de cada Card y empujarlos al array vacio idSlider
 function getIdSlider() {
   slider.forEach(function(item){
     let id = item.getAttribute("id");
@@ -18,6 +19,7 @@ function getIdSlider() {
 }
 getIdSlider();
 
+//Está función es para obtener cada uno de los "margin-inline-start" de los DIV contenedores de imagenes de cada Card y empujarlos a los arrays vacios marginArray y counterArray
 function getMarginSlider() {
   slider.forEach(function(item){
     let objectStyles = window.getComputedStyle(item);
@@ -28,6 +30,7 @@ function getMarginSlider() {
 }
 getMarginSlider();
 
+//Está función es para obtener cada uno de los ID de los NextButton de cada Card y empujarlos al array vacio idNextButtton
 function getIdNextButton() {
   nextButton.forEach(function(item){
     let id = item.getAttribute("id");
@@ -36,6 +39,7 @@ function getIdNextButton() {
 }
 getIdNextButton();
 
+//Está función es para obtener cada uno de los ID de los BackButton de cada Card y empujarlos al array vacio idBackButton
 function getIdBackButton() {
   backButton.forEach(function(item){
     let id = item.getAttribute("id");
@@ -44,6 +48,7 @@ function getIdBackButton() {
 }
 getIdBackButton();
 
+//Está función es para obtener cada uno de los ID de los DIV contenedores de marksIndicator de cada Card y empujarlos al array vacio idMarksContainer
 function getIdMarksContainer() {
   marksContainer.forEach(function(item){
     let id = item.getAttribute("id");
@@ -67,7 +72,6 @@ function Slider(index, button) {
   let nextMarkToActivate = marksOnSlider[objectCounter + 1];
   let backMarkToActivate = marksOnSlider[objectCounter - 1];
   let ElementTarget = button;
-  console.log(ElementTarget);
 
   function addMargin(){
     sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
@@ -139,6 +143,4 @@ function Slider(index, button) {
         backSliderActive();
     }
   }
-  console.log(marginArray);
-  console.log(counterArray);
 }
