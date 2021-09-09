@@ -57,7 +57,8 @@ function showPagedSection() {
 
 showPagedSection()
 
-//Está función es para activar el paginado, estilos de los botones y cambiar los cards
+//Está función es para cambiar de pagina, estilos de los botones y cambiar los cards
+// Se incluye la función de showFiveCards que esta en el archivo de activeButtons
 function activePaged(tecnology, numberPage, firstRange, secondRange) {
   numberOfPages.forEach(function(item){
     item.classList.remove("actived");
@@ -69,82 +70,40 @@ function activePaged(tecnology, numberPage, firstRange, secondRange) {
   showFiveCards(tecnology, firstRange, secondRange);
 }
 
+//Esta función es para saber que tecnologia y pagina activar dependiendo del boton que se le de click
+//Se incluye la anterior función para que se active la pagina correspondiente
+function switchPages(tecnology, pageNumber) {
+  switch(pageNumber) {
+    case 0:
+      activePaged(tecnology, pageNumber, 0, 5);
+      break;
+    case 1:
+      activePaged(tecnology, pageNumber, 5, 10);
+      break;
+    case 2:
+      activePaged(tecnology, pageNumber, 10, 15);
+      break;
+    case 3:
+      activePaged(tecnology, pageNumber, 15, 20);
+      break;
+    case 4:
+      activePaged(tecnology, pageNumber, 20, 25);
+      break;
+  }
+}
+
 function changePages(page) {
   let classOfAllButton = allButton.getAttribute('class');
   let classOfHtmlButton = htmlButton.getAttribute('class');
   let classOfCssButton = cssButton.getAttribute('class');
   let classOfJsButton = jsButton.getAttribute('class');
   if(classOfAllButton === "buttons__all is-active"){
-    switch(page) {
-      case 0:
-        activePaged(allCards, page, 0, 5);
-        break;
-      case 1:
-        activePaged(allCards, page, 5, 10);
-        break;
-      case 2:
-        activePaged(allCards, page, 10, 15);
-        break;
-      case 3:
-        activePaged(allCards, page, 15, 20);
-        break;
-      case 4:
-        activePaged(allCards, page, 20, 25);
-        break;
-    }
+    switchPages(allCards, page);
   } else if(classOfHtmlButton === "buttons__html is-active"){
-    switch(page) {
-      case 0:
-        activePaged(htmlCards, page, 0, 5);
-        break;
-      case 1:
-        activePaged(htmlCards, page, 5, 10);
-        break;
-      case 2:
-        activePaged(htmlCards, page, 10, 15);
-        break;
-      case 3:
-        activePaged(htmlCards, page, 15, 20);
-        break;
-      case 4:
-        activePaged(htmlCards, page, 20, 25);
-        break;
-    }
+    switchPages(htmlCards, page);
   } else if(classOfCssButton === "buttons__css is-active"){
-    switch(page) {
-      case 0:
-        activePaged(cssCards, page, 0, 5);
-        break;
-      case 1:
-        activePaged(cssCards, page, 5, 10);
-        break;
-      case 2:
-        activePaged(cssCards, page, 10, 15);
-        break;
-      case 3:
-        activePaged(cssCards, page, 15, 20);
-        break;
-      case 4:
-        activePaged(cssCards, page, 20, 25);
-        break;
-    }
+    switchPages(cssCards, page);
   } else if(classOfJsButton === "buttons__js is-active"){
-    switch(page) {
-      case 0:
-        activePaged(jsCards, page, 0, 5);
-        break;
-      case 1:
-        activePaged(jsCards, page, 5, 10);
-        break;
-      case 2:
-        activePaged(jsCards, page, 10, 15);
-        break;
-      case 3:
-        activePaged(jsCards, page, 15, 20);
-        break;
-      case 4:
-        activePaged(jsCards, page, 20, 25);
-        break;
-    }
+    switchPages(jsCards, page);
   }
 };
