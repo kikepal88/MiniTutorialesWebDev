@@ -125,335 +125,77 @@ function Slider(index, button) {
     backMarkToActivate.classList.add("actived")
   }
 
+ //Está función es para que se active la funcion de addMargin cuando se da click sobre el boton Next
+  const nextSliderActive = function(initialMargin, changeMargin, unid) {
+    if(lengthImagesArray === lengthImagesArray){
+      if(counterArray[index] < lengthImagesArray - 2){
+        addMargin(initialMargin, changeMargin, unid);
+      } else if(counterArray[index] <= lengthImagesArray - 1) {
+        addMargin(initialMargin, changeMargin, unid);
+        buttonNextGetClick.style.display = "none";
+      }
+    }
+  }
+
+ //Está función es para que se active la funcion de removeMargin cuando se da click sobre el boton Back
+  const backSliderActive = function(initialMargin, changeMargin, unid) {
+    if(lengthImagesArray === lengthImagesArray){
+      if(counterArray[index] === 1){
+        removeMargin(initialMargin, changeMargin, unid);
+        buttonBackGetClick.classList.add("hide");
+      } else if(counterArray[index] === lengthImagesArray - 1) {
+        removeMargin(initialMargin, changeMargin, unid);
+        buttonNextGetClick.style.display = "flex";
+      } else if(counterArray[index] > 1) {
+        removeMargin(initialMargin, changeMargin, unid);
+      }
+    }
+  }
+
+  //Está es la función de validación de cual boton se esta presionando y activar su función
+  function whatButtonValidaton(initialMargin, changeMargin, unid) {
+    if(ElementTarget === 'next') {
+      switch(marginArray[index]) {
+        case 0:
+        case -100:
+        case -200:
+        case -300:
+        case -400:
+        case -500:
+        case -600:
+        case -700:
+        case -800:
+        case -900:
+          nextSliderActive(initialMargin, changeMargin, unid);
+      }
+    } else if(ElementTarget === 'back') {
+      switch(marginArray[index]) {
+        case 0:
+        case -100:
+        case -200:
+        case -300:
+        case -400:
+        case -500:
+        case -600:
+        case -700:
+        case -800:
+        case -900:
+          backSliderActive(initialMargin, changeMargin, unid);
+      }
+    }
+  }
+
   if(windowWidth < 768) {
-    const nextSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] < lengthImagesArray - 2){
-          addMargin(objectMargin, changeMargin768, "%");
-        } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin(objectMargin, changeMargin768, "%");
-          buttonNextGetClick.style.display = "none";
-        }
-      }
-    }
-
-    const backSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] === 1){
-          removeMargin(objectMargin, changeMargin768, "%");
-          buttonBackGetClick.classList.add("hide");
-        } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin(objectMargin, changeMargin768, "%");
-          buttonNextGetClick.style.display = "flex";
-        } else if(counterArray[index] > 1) {
-          removeMargin(objectMargin, changeMargin768, "%");
-        }
-      }
-    }
-
-    if(ElementTarget === 'next') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          nextSliderActive();
-      }
-    } else if(ElementTarget === 'back') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          backSliderActive();
-      }
-    }
+    whatButtonValidaton(objectMargin, changeMargin768, "%");
   } else if(windowWidth < 1120) {
-    const nextSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] < lengthImagesArray - 2){
-          addMargin(objectMargin1120Px, changeMargin1120, "px");
-        } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin(objectMargin1120Px, changeMargin1120, "px");
-          buttonNextGetClick.style.display = "none";
-        }
-      }
-    }
-
-    const backSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] === 1){
-          removeMargin(objectMargin1120Px, changeMargin1120, "px");
-          buttonBackGetClick.classList.add("hide");
-        } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin(objectMargin1120Px, changeMargin1120, "px");
-          buttonNextGetClick.style.display = "flex";
-        } else if(counterArray[index] > 1) {
-          removeMargin(objectMargin1120Px, changeMargin1120, "px");
-        }
-      }
-    }
-
-    if(ElementTarget === 'next') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          nextSliderActive();
-      }
-    } else if(ElementTarget === 'back') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          backSliderActive();
-      }
-    }
+      whatButtonValidaton(objectMargin1120Px, changeMargin1120, "px");
   } else if(windowWidth < 1280) {
-    const nextSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] < lengthImagesArray - 2){
-          addMargin(objectMargin1280Px, changeMargin1280, "px");
-        } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin(objectMargin1280Px, changeMargin1280, "px");
-          buttonNextGetClick.style.display = "none";
-        }
-      }
-    }
-
-    const backSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] === 1){
-          removeMargin(objectMargin1280Px, changeMargin1280, "px");
-          buttonBackGetClick.classList.add("hide");
-        } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin(objectMargin1280Px, changeMargin1280, "px");
-          buttonNextGetClick.style.display = "flex";
-        } else if(counterArray[index] > 1) {
-          removeMargin(objectMargin1280Px, changeMargin1280, "px");
-        }
-      }
-    }
-
-    if(ElementTarget === 'next') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          nextSliderActive();
-      }
-    } else if(ElementTarget === 'back') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          backSliderActive();
-      }
-    }
+      whatButtonValidaton(objectMargin1280Px, changeMargin1280, "px");
   } else if(windowWidth < 1366) {
-    const nextSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] < lengthImagesArray - 2){
-          addMargin(objectMargin1366Px, changeMargin1366, "px");
-        } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin(objectMargin1366Px, changeMargin1366, "px");
-          buttonNextGetClick.style.display = "none";
-        }
-      }
-    }
-
-    const backSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] === 1){
-          removeMargin(objectMargin1366Px, changeMargin1366, "px");
-          buttonBackGetClick.classList.add("hide");
-        } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin(objectMargin1366Px, changeMargin1366, "px");
-          buttonNextGetClick.style.display = "flex";
-        } else if(counterArray[index] > 1) {
-          removeMargin(objectMargin1366Px, changeMargin1366, "px");
-        }
-      }
-    }
-
-    if(ElementTarget === 'next') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          nextSliderActive();
-      }
-    } else if(ElementTarget === 'back') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          backSliderActive();
-      }
-    }
+      whatButtonValidaton(objectMargin1366Px, changeMargin1366, "px");
   } else if(windowWidth < 1600) {
-    const nextSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] < lengthImagesArray - 2){
-          addMargin(objectMargin1600Px, changeMargin1600, "px");
-        } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin(objectMargin1600Px, changeMargin1600, "px");
-          buttonNextGetClick.style.display = "none";
-        }
-      }
-    }
-
-    const backSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] === 1){
-          removeMargin(objectMargin1600Px, changeMargin1600, "px");
-          buttonBackGetClick.classList.add("hide");
-        } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin(objectMargin1600Px, changeMargin1600, "px");
-          buttonNextGetClick.style.display = "flex";
-        } else if(counterArray[index] > 1) {
-          removeMargin(objectMargin1600Px, changeMargin1600, "px");
-        }
-      }
-    }
-
-    if(ElementTarget === 'next') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          nextSliderActive();
-      }
-    } else if(ElementTarget === 'back') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          backSliderActive();
-      }
-    }
+      whatButtonValidaton(objectMargin1600Px, changeMargin1600, "px");
   } else {
-    const nextSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] < lengthImagesArray - 2){
-          addMargin(objectMargin1720Px, changeMargin1720, "px");
-        } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin();
-          addMargin(objectMargin1720Px, changeMargin1720, "px");
-        }
-      }
-    }
-
-    const backSliderActive = function() {
-      if(lengthImagesArray === lengthImagesArray){
-        if(counterArray[index] === 1){
-          removeMargin(objectMargin1720Px, changeMargin1720, "px");
-          buttonBackGetClick.classList.add("hide");
-        } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin(objectMargin1720Px, changeMargin1720, "px");
-          buttonNextGetClick.style.display = "flex";
-        } else if(counterArray[index] > 1) {
-          removeMargin(objectMargin1720Px, changeMargin1720, "px");
-        }
-      }
-    }
-
-    if(ElementTarget === 'next') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          nextSliderActive();
-      }
-    } else if(ElementTarget === 'back') {
-      switch(marginArray[index]) {
-        case 0:
-        case -100:
-        case -200:
-        case -300:
-        case -400:
-        case -500:
-        case -600:
-        case -700:
-        case -800:
-        case -900:
-          backSliderActive();
-      }
-    }
+      whatButtonValidaton(objectMargin1720Px, changeMargin1720, "px");
   }
 }
