@@ -1,14 +1,20 @@
 const slider = Array.from(document.getElementsByClassName("tutorial__img-container"));
 const idSlider = [];
 const marginArray = [];
+console.log(marginArray);
+const marginArrayPercentage = [];
+console.log(marginArrayPercentage);
 const counterArray = [];
+console.log(counterArray);
 const nextButton = Array.from(document.getElementsByClassName("button__next"));
 const idNextButtton = [];
 const backButton = Array.from(document.getElementsByClassName("button__back"));
 const idBackButton = [];
 const marksContainer = Array.from(document.getElementsByClassName("tutorial__indicator-container"));
 const idMarksContainer = [];
-const changeMargin = 100;
+const changeMargin768 = 100;
+const changeMargin1120 = 360;
+const changeMargin1280 = 350;
 
 //Está función es para obtener cada uno de los ID de los DIV contenedores de imagenes de cada Card y empujarlos al array vacio idSlider
 function getIdSlider() {
@@ -25,6 +31,7 @@ function getMarginSlider() {
     let objectStyles = window.getComputedStyle(item);
     let marginLeft = parseFloat(objectStyles.getPropertyValue("margin-inline-start"));
     marginArray.push(marginLeft);
+    marginArrayPercentage.push(marginLeft);
     counterArray.push(marginLeft);
   })
 }
@@ -67,6 +74,7 @@ function Slider(index, button) {
   let markContainerOnSlider = document.getElementById(`${idMarksContainer[index]}`);
   let marksOnSlider = Array.from(markContainerOnSlider.getElementsByClassName("indicator__mark"));
   let objectMargin = marginArray[index];
+  let objectMarginPx = marginArrayPercentage[index];
   let objectCounter = counterArray[index];
   let markActive = marksOnSlider[objectCounter];
   let nextMarkToActivate = marksOnSlider[objectCounter + 1];
@@ -74,22 +82,25 @@ function Slider(index, button) {
   let ElementTarget = button;
   let windowWidth = window.innerWidth;
   console.log(windowWidth);
-  let windowHeight = window.innerHeight;
-  console.log(windowHeight);
+  console.log(marginArray);
+  console.log(marginArrayPercentage);
+  console.log(counterArray);
 
   if(windowWidth < 768) {
     function addMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
+      sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin768}%`;
       counterArray[index] = objectCounter + 1;
-      marginArray[index] = objectMargin - changeMargin;
+      marginArray[index] = objectMargin - changeMargin768;
+      marginArrayPercentage[index] = objectMarginPx - changeMargin1120;
       markActive.classList.remove("actived")
       nextMarkToActivate.classList.add("actived")
     }
 
     function removeMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin}%`;
+      sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin768}%`;
       counterArray[index] = objectCounter - 1;
-      marginArray[index] = objectMargin + changeMargin;
+      marginArray[index] = objectMargin + changeMargin768;
+      marginArrayPercentage[index] = objectMarginPx + changeMargin1120;
       markActive.classList.remove("actived")
       backMarkToActivate.classList.add("actived")
     }
@@ -150,17 +161,19 @@ function Slider(index, button) {
     }
   } else if(windowWidth < 1120) {
     function addMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
+      sliderGetClick.style.marginInlineStart = `${objectMarginPx - changeMargin1120}px`;
       counterArray[index] = objectCounter + 1;
-      marginArray[index] = objectMargin - changeMargin;
+      marginArray[index] = objectMargin - changeMargin768;
+      marginArrayPercentage[index] = objectMarginPx - changeMargin1120;
       markActive.classList.remove("actived")
       nextMarkToActivate.classList.add("actived")
     }
 
     function removeMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin}%`;
+      sliderGetClick.style.marginInlineStart = `${objectMarginPx + changeMargin1120}px`;
       counterArray[index] = objectCounter - 1;
-      marginArray[index] = objectMargin + changeMargin;
+      marginArray[index] = objectMargin + changeMargin768;
+      marginArrayPercentage[index] = objectMarginPx + changeMargin1120;
       markActive.classList.remove("actived")
       backMarkToActivate.classList.add("actived")
     }
