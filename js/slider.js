@@ -96,21 +96,22 @@ function Slider(index, button) {
   console.log(windowWidth);
   console.log(marginArray);
   console.log(counterArray);
+  
+  //Está función es adicionar la margen al contenedor de imagenes y asi funcione el slider, tambien va sumando al conteo de margen
+  function addMargin(initialMargin, changeMargin, unid){
+    sliderGetClick.style.marginInlineStart = `${initialMargin - changeMargin}${unid}`;
+    counterArray[index] = objectCounter + 1;
+    marginArray[index] = objectMargin - changeMargin768;
+    marginArray1120[index] = objectMargin1120Px - changeMargin1120;
+    marginArray1280[index] = objectMargin1280Px - changeMargin1280;
+    marginArray1366[index] = objectMargin1366Px - changeMargin1366;
+    marginArray1600[index] = objectMargin1600Px - changeMargin1600;
+    marginArray1720[index] = objectMargin1720Px - changeMargin1720;
+    markActive.classList.remove("actived")
+    nextMarkToActivate.classList.add("actived")
+  }
 
   if(windowWidth < 768) {
-    function addMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin768}%`;
-      counterArray[index] = objectCounter + 1;
-      marginArray[index] = objectMargin - changeMargin768;
-      marginArray1120[index] = objectMargin1120Px - changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px - changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px - changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px - changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px - changeMargin1720;
-      markActive.classList.remove("actived")
-      nextMarkToActivate.classList.add("actived")
-    }
-
     function removeMargin(){
       sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin768}%`;
       counterArray[index] = objectCounter - 1;
@@ -127,9 +128,9 @@ function Slider(index, button) {
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
-          addMargin();
+          addMargin(objectMargin, changeMargin768, "%");
         } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin();
+          addMargin(objectMargin, changeMargin768, "%");
           buttonNextGetClick.style.display = "none";
         }
       }
@@ -179,19 +180,6 @@ function Slider(index, button) {
       }
     }
   } else if(windowWidth < 1120) {
-    function addMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1120Px - changeMargin1120}px`;
-      counterArray[index] = objectCounter + 1;
-      marginArray[index] = objectMargin - changeMargin768;
-      marginArray1120[index] = objectMargin1120Px - changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px - changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px - changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px - changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px - changeMargin1720;
-      markActive.classList.remove("actived")
-      nextMarkToActivate.classList.add("actived")
-    }
-
     function removeMargin(){
       sliderGetClick.style.marginInlineStart = `${objectMargin1120Px + changeMargin1120}px`;
       counterArray[index] = objectCounter - 1;
@@ -208,9 +196,9 @@ function Slider(index, button) {
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
-          addMargin();
+          addMargin(objectMargin1120Px, changeMargin1120, "px");
         } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin();
+          addMargin(objectMargin1120Px, changeMargin1120, "px");
           buttonNextGetClick.style.display = "none";
         }
       }
@@ -260,19 +248,6 @@ function Slider(index, button) {
       }
     }
   } else if(windowWidth < 1280) {
-    function addMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1280Px - changeMargin1280}px`;
-      counterArray[index] = objectCounter + 1;
-      marginArray[index] = objectMargin - changeMargin768;
-      marginArray1120[index] = objectMargin1120Px - changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px - changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px - changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px - changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px - changeMargin1720;
-      markActive.classList.remove("actived")
-      nextMarkToActivate.classList.add("actived")
-    }
-
     function removeMargin(){
       sliderGetClick.style.marginInlineStart = `${objectMargin1280Px + changeMargin1280}px`;
       counterArray[index] = objectCounter - 1;
@@ -289,9 +264,9 @@ function Slider(index, button) {
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
-          addMargin();
+          addMargin(objectMargin1280Px, changeMargin1280, "px");
         } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin();
+          addMargin(objectMargin1280Px, changeMargin1280, "px");
           buttonNextGetClick.style.display = "none";
         }
       }
@@ -341,19 +316,6 @@ function Slider(index, button) {
       }
     }
   } else if(windowWidth < 1366) {
-    function addMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1366Px - changeMargin1366}px`;
-      counterArray[index] = objectCounter + 1;
-      marginArray[index] = objectMargin - changeMargin768;
-      marginArray1120[index] = objectMargin1120Px - changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px - changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px - changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px - changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px - changeMargin1720;
-      markActive.classList.remove("actived")
-      nextMarkToActivate.classList.add("actived")
-    }
-
     function removeMargin(){
       sliderGetClick.style.marginInlineStart = `${objectMargin1366Px + changeMargin1366}px`;
       counterArray[index] = objectCounter - 1;
@@ -370,9 +332,9 @@ function Slider(index, button) {
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
-          addMargin();
+          addMargin(objectMargin1366Px, changeMargin1366, "px");
         } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin();
+          addMargin(objectMargin1366Px, changeMargin1366, "px");
           buttonNextGetClick.style.display = "none";
         }
       }
@@ -422,19 +384,6 @@ function Slider(index, button) {
       }
     }
   } else if(windowWidth < 1600) {
-    function addMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1600Px - changeMargin1600}px`;
-      counterArray[index] = objectCounter + 1;
-      marginArray[index] = objectMargin - changeMargin768;
-      marginArray1120[index] = objectMargin1120Px - changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px - changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px - changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px - changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px - changeMargin1720;
-      markActive.classList.remove("actived")
-      nextMarkToActivate.classList.add("actived")
-    }
-
     function removeMargin(){
       sliderGetClick.style.marginInlineStart = `${objectMargin1600Px + changeMargin1600}px`;
       counterArray[index] = objectCounter - 1;
@@ -451,9 +400,9 @@ function Slider(index, button) {
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
-          addMargin();
+          addMargin(objectMargin1600Px, changeMargin1600, "px");
         } else if(counterArray[index] <= lengthImagesArray - 1) {
-          addMargin();
+          addMargin(objectMargin1600Px, changeMargin1600, "px");
           buttonNextGetClick.style.display = "none";
         }
       }
@@ -503,19 +452,6 @@ function Slider(index, button) {
       }
     }
   } else {
-    function addMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1720Px - changeMargin1720}px`;
-      counterArray[index] = objectCounter + 1;
-      marginArray[index] = objectMargin - changeMargin768;
-      marginArray1120[index] = objectMargin1120Px - changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px - changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px - changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px - changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px - changeMargin1720;
-      markActive.classList.remove("actived")
-      nextMarkToActivate.classList.add("actived")
-    }
-
     function removeMargin(){
       sliderGetClick.style.marginInlineStart = `${objectMargin1720Px + changeMargin1720}px`;
       counterArray[index] = objectCounter - 1;
@@ -532,10 +468,10 @@ function Slider(index, button) {
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
-          addMargin();
+          addMargin(objectMargin1720Px, changeMargin1720, "px");
         } else if(counterArray[index] <= lengthImagesArray - 1) {
           addMargin();
-          buttonNextGetClick.style.display = "none";
+          addMargin(objectMargin1720Px, changeMargin1720, "px");
         }
       }
     }
@@ -584,5 +520,4 @@ function Slider(index, button) {
       }
     }
   }
-
 }
