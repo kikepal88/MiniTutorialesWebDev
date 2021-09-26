@@ -72,75 +72,223 @@ function Slider(index, button) {
   let nextMarkToActivate = marksOnSlider[objectCounter + 1];
   let backMarkToActivate = marksOnSlider[objectCounter - 1];
   let ElementTarget = button;
+  let windowWidth = window.innerWidth;
+  console.log(windowWidth);
+  let windowHeight = window.innerHeight;
+  console.log(windowHeight);
 
-  function addMargin(){
-    sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
-    counterArray[index] = objectCounter + 1;
-    marginArray[index] = objectMargin - changeMargin;
-    markActive.classList.remove("actived")
-    nextMarkToActivate.classList.add("actived")
-  }
+  if(windowWidth < 768) {
+    function addMargin(){
+      sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
+      counterArray[index] = objectCounter + 1;
+      marginArray[index] = objectMargin - changeMargin;
+      markActive.classList.remove("actived")
+      nextMarkToActivate.classList.add("actived")
+    }
 
-  function removeMargin(){
-    sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin}%`;
-    counterArray[index] = objectCounter - 1;
-    marginArray[index] = objectMargin + changeMargin;
-    markActive.classList.remove("actived")
-    backMarkToActivate.classList.add("actived")
-  }
+    function removeMargin(){
+      sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin}%`;
+      counterArray[index] = objectCounter - 1;
+      marginArray[index] = objectMargin + changeMargin;
+      markActive.classList.remove("actived")
+      backMarkToActivate.classList.add("actived")
+    }
 
-  const nextSliderActive = function() {
-    if(lengthImagesArray === lengthImagesArray){
-      if(counterArray[index] < lengthImagesArray - 2){
-        addMargin();
-      } else if(counterArray[index] <= lengthImagesArray - 1) {
-        addMargin();
-        buttonNextGetClick.style.display = "none";
+    const nextSliderActive = function() {
+      if(lengthImagesArray === lengthImagesArray){
+        if(counterArray[index] < lengthImagesArray - 2){
+          addMargin();
+        } else if(counterArray[index] <= lengthImagesArray - 1) {
+          addMargin();
+          buttonNextGetClick.style.display = "none";
+        }
+      }
+    }
+
+    const backSliderActive = function() {
+      if(lengthImagesArray === lengthImagesArray){
+        if(counterArray[index] === 1){
+          removeMargin();
+          buttonBackGetClick.classList.add("hide");
+        } else if(counterArray[index] === lengthImagesArray - 1) {
+          removeMargin();
+          buttonNextGetClick.style.display = "flex";
+        } else if(counterArray[index] > 1) {
+          removeMargin();
+        }
+      }
+    }
+
+    if(ElementTarget === 'next') {
+      switch(marginArray[index]) {
+        case 0:
+        case -100:
+        case -200:
+        case -300:
+        case -400:
+        case -500:
+        case -600:
+        case -700:
+        case -800:
+        case -900:
+          nextSliderActive();
+      }
+    } else if(ElementTarget === 'back') {
+      switch(marginArray[index]) {
+        case 0:
+        case -100:
+        case -200:
+        case -300:
+        case -400:
+        case -500:
+        case -600:
+        case -700:
+        case -800:
+        case -900:
+          backSliderActive();
+      }
+    }
+  } else if(windowWidth < 1120) {
+    function addMargin(){
+      sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
+      counterArray[index] = objectCounter + 1;
+      marginArray[index] = objectMargin - changeMargin;
+      markActive.classList.remove("actived")
+      nextMarkToActivate.classList.add("actived")
+    }
+
+    function removeMargin(){
+      sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin}%`;
+      counterArray[index] = objectCounter - 1;
+      marginArray[index] = objectMargin + changeMargin;
+      markActive.classList.remove("actived")
+      backMarkToActivate.classList.add("actived")
+    }
+
+    const nextSliderActive = function() {
+      if(lengthImagesArray === lengthImagesArray){
+        if(counterArray[index] < lengthImagesArray - 2){
+          addMargin();
+        } else if(counterArray[index] <= lengthImagesArray - 1) {
+          addMargin();
+          buttonNextGetClick.style.display = "none";
+        }
+      }
+    }
+
+    const backSliderActive = function() {
+      if(lengthImagesArray === lengthImagesArray){
+        if(counterArray[index] === 1){
+          removeMargin();
+          buttonBackGetClick.classList.add("hide");
+        } else if(counterArray[index] === lengthImagesArray - 1) {
+          removeMargin();
+          buttonNextGetClick.style.display = "flex";
+        } else if(counterArray[index] > 1) {
+          removeMargin();
+        }
+      }
+    }
+
+    if(ElementTarget === 'next') {
+      switch(marginArray[index]) {
+        case 0:
+        case -100:
+        case -200:
+        case -300:
+        case -400:
+        case -500:
+        case -600:
+        case -700:
+        case -800:
+        case -900:
+          nextSliderActive();
+      }
+    } else if(ElementTarget === 'back') {
+      switch(marginArray[index]) {
+        case 0:
+        case -100:
+        case -200:
+        case -300:
+        case -400:
+        case -500:
+        case -600:
+        case -700:
+        case -800:
+        case -900:
+          backSliderActive();
       }
     }
   }
 
-  const backSliderActive = function() {
-    if(lengthImagesArray === lengthImagesArray){
-      if(counterArray[index] === 1){
-        removeMargin();
-        buttonBackGetClick.classList.add("hide");
-      } else if(counterArray[index] === lengthImagesArray - 1) {
-        removeMargin();
-        buttonNextGetClick.style.display = "flex";
-      } else if(counterArray[index] > 1) {
-        removeMargin();
-      }
-    }
-  }
+  // function addMargin(){
+  //   sliderGetClick.style.marginInlineStart = `${objectMargin - changeMargin}%`;
+  //   counterArray[index] = objectCounter + 1;
+  //   marginArray[index] = objectMargin - changeMargin;
+  //   markActive.classList.remove("actived")
+  //   nextMarkToActivate.classList.add("actived")
+  // }
 
-  if(ElementTarget === 'next') {
-    switch(marginArray[index]) {
-      case 0:
-      case -100:
-      case -200:
-      case -300:
-      case -400:
-      case -500:
-      case -600:
-      case -700:
-      case -800:
-      case -900:
-        nextSliderActive();
-    }
-  } else if(ElementTarget === 'back') {
-    switch(marginArray[index]) {
-      case 0:
-      case -100:
-      case -200:
-      case -300:
-      case -400:
-      case -500:
-      case -600:
-      case -700:
-      case -800:
-      case -900:
-        backSliderActive();
-    }
-  }
+  // function removeMargin(){
+  //   sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin}%`;
+  //   counterArray[index] = objectCounter - 1;
+  //   marginArray[index] = objectMargin + changeMargin;
+  //   markActive.classList.remove("actived")
+  //   backMarkToActivate.classList.add("actived")
+  // }
+
+  // const nextSliderActive = function() {
+  //   if(lengthImagesArray === lengthImagesArray){
+  //     if(counterArray[index] < lengthImagesArray - 2){
+  //       addMargin();
+  //     } else if(counterArray[index] <= lengthImagesArray - 1) {
+  //       addMargin();
+  //       buttonNextGetClick.style.display = "none";
+  //     }
+  //   }
+  // }
+
+  // const backSliderActive = function() {
+  //   if(lengthImagesArray === lengthImagesArray){
+  //     if(counterArray[index] === 1){
+  //       removeMargin();
+  //       buttonBackGetClick.classList.add("hide");
+  //     } else if(counterArray[index] === lengthImagesArray - 1) {
+  //       removeMargin();
+  //       buttonNextGetClick.style.display = "flex";
+  //     } else if(counterArray[index] > 1) {
+  //       removeMargin();
+  //     }
+  //   }
+  // }
+
+  // if(ElementTarget === 'next') {
+  //   switch(marginArray[index]) {
+  //     case 0:
+  //     case -100:
+  //     case -200:
+  //     case -300:
+  //     case -400:
+  //     case -500:
+  //     case -600:
+  //     case -700:
+  //     case -800:
+  //     case -900:
+  //       nextSliderActive();
+  //   }
+  // } else if(ElementTarget === 'back') {
+  //   switch(marginArray[index]) {
+  //     case 0:
+  //     case -100:
+  //     case -200:
+  //     case -300:
+  //     case -400:
+  //     case -500:
+  //     case -600:
+  //     case -700:
+  //     case -800:
+  //     case -900:
+  //       backSliderActive();
+  //   }
+  // }
 }
