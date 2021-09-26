@@ -111,20 +111,21 @@ function Slider(index, button) {
     nextMarkToActivate.classList.add("actived")
   }
 
-  if(windowWidth < 768) {
-    function removeMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin + changeMargin768}%`;
-      counterArray[index] = objectCounter - 1;
-      marginArray[index] = objectMargin + changeMargin768;
-      marginArray1120[index] = objectMargin1120Px + changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px + changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px + changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px + changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px + changeMargin1720;
-      markActive.classList.remove("actived")
-      backMarkToActivate.classList.add("actived")
-    }
+  //Está función es retirar la margen al contenedor de imagenes y asi funcione el slider, tambien va restando al conteo de margen
+  function removeMargin(initialMargin, changeMargin, unid){
+    sliderGetClick.style.marginInlineStart = `${initialMargin + changeMargin}${unid}`;
+    counterArray[index] = objectCounter - 1;
+    marginArray[index] = objectMargin + changeMargin768;
+    marginArray1120[index] = objectMargin1120Px + changeMargin1120;
+    marginArray1280[index] = objectMargin1280Px + changeMargin1280;
+    marginArray1366[index] = objectMargin1366Px + changeMargin1366;
+    marginArray1600[index] = objectMargin1600Px + changeMargin1600;
+    marginArray1720[index] = objectMargin1720Px + changeMargin1720;
+    markActive.classList.remove("actived")
+    backMarkToActivate.classList.add("actived")
+  }
 
+  if(windowWidth < 768) {
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
@@ -139,13 +140,13 @@ function Slider(index, button) {
     const backSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] === 1){
-          removeMargin();
+          removeMargin(objectMargin, changeMargin768, "%");
           buttonBackGetClick.classList.add("hide");
         } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin();
+          removeMargin(objectMargin, changeMargin768, "%");
           buttonNextGetClick.style.display = "flex";
         } else if(counterArray[index] > 1) {
-          removeMargin();
+          removeMargin(objectMargin, changeMargin768, "%");
         }
       }
     }
@@ -180,19 +181,6 @@ function Slider(index, button) {
       }
     }
   } else if(windowWidth < 1120) {
-    function removeMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1120Px + changeMargin1120}px`;
-      counterArray[index] = objectCounter - 1;
-      marginArray[index] = objectMargin + changeMargin768;
-      marginArray1120[index] = objectMargin1120Px + changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px + changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px + changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px + changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px + changeMargin1720;
-      markActive.classList.remove("actived")
-      backMarkToActivate.classList.add("actived")
-    }
-
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
@@ -207,13 +195,13 @@ function Slider(index, button) {
     const backSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] === 1){
-          removeMargin();
+          removeMargin(objectMargin1120Px, changeMargin1120, "px");
           buttonBackGetClick.classList.add("hide");
         } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin();
+          removeMargin(objectMargin1120Px, changeMargin1120, "px");
           buttonNextGetClick.style.display = "flex";
         } else if(counterArray[index] > 1) {
-          removeMargin();
+          removeMargin(objectMargin1120Px, changeMargin1120, "px");
         }
       }
     }
@@ -248,19 +236,6 @@ function Slider(index, button) {
       }
     }
   } else if(windowWidth < 1280) {
-    function removeMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1280Px + changeMargin1280}px`;
-      counterArray[index] = objectCounter - 1;
-      marginArray[index] = objectMargin + changeMargin768;
-      marginArray1120[index] = objectMargin1120Px + changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px + changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px + changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px + changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px + changeMargin1720;
-      markActive.classList.remove("actived")
-      backMarkToActivate.classList.add("actived")
-    }
-
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
@@ -275,13 +250,13 @@ function Slider(index, button) {
     const backSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] === 1){
-          removeMargin();
+          removeMargin(objectMargin1280Px, changeMargin1280, "px");
           buttonBackGetClick.classList.add("hide");
         } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin();
+          removeMargin(objectMargin1280Px, changeMargin1280, "px");
           buttonNextGetClick.style.display = "flex";
         } else if(counterArray[index] > 1) {
-          removeMargin();
+          removeMargin(objectMargin1280Px, changeMargin1280, "px");
         }
       }
     }
@@ -316,19 +291,6 @@ function Slider(index, button) {
       }
     }
   } else if(windowWidth < 1366) {
-    function removeMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1366Px + changeMargin1366}px`;
-      counterArray[index] = objectCounter - 1;
-      marginArray[index] = objectMargin + changeMargin768;
-      marginArray1120[index] = objectMargin1120Px + changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px + changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px + changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px + changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px + changeMargin1720;
-      markActive.classList.remove("actived")
-      backMarkToActivate.classList.add("actived")
-    }
-
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
@@ -343,13 +305,13 @@ function Slider(index, button) {
     const backSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] === 1){
-          removeMargin();
+          removeMargin(objectMargin1366Px, changeMargin1366, "px");
           buttonBackGetClick.classList.add("hide");
         } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin();
+          removeMargin(objectMargin1366Px, changeMargin1366, "px");
           buttonNextGetClick.style.display = "flex";
         } else if(counterArray[index] > 1) {
-          removeMargin();
+          removeMargin(objectMargin1366Px, changeMargin1366, "px");
         }
       }
     }
@@ -384,19 +346,6 @@ function Slider(index, button) {
       }
     }
   } else if(windowWidth < 1600) {
-    function removeMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1600Px + changeMargin1600}px`;
-      counterArray[index] = objectCounter - 1;
-      marginArray[index] = objectMargin + changeMargin768;
-      marginArray1120[index] = objectMargin1120Px + changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px + changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px + changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px + changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px + changeMargin1720;
-      markActive.classList.remove("actived")
-      backMarkToActivate.classList.add("actived")
-    }
-
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
@@ -411,13 +360,13 @@ function Slider(index, button) {
     const backSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] === 1){
-          removeMargin();
+          removeMargin(objectMargin1600Px, changeMargin1600, "px");
           buttonBackGetClick.classList.add("hide");
         } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin();
+          removeMargin(objectMargin1600Px, changeMargin1600, "px");
           buttonNextGetClick.style.display = "flex";
         } else if(counterArray[index] > 1) {
-          removeMargin();
+          removeMargin(objectMargin1600Px, changeMargin1600, "px");
         }
       }
     }
@@ -452,19 +401,6 @@ function Slider(index, button) {
       }
     }
   } else {
-    function removeMargin(){
-      sliderGetClick.style.marginInlineStart = `${objectMargin1720Px + changeMargin1720}px`;
-      counterArray[index] = objectCounter - 1;
-      marginArray[index] = objectMargin + changeMargin768;
-      marginArray1120[index] = objectMargin1120Px + changeMargin1120;
-      marginArray1280[index] = objectMargin1280Px + changeMargin1280;
-      marginArray1366[index] = objectMargin1366Px + changeMargin1366;
-      marginArray1600[index] = objectMargin1600Px + changeMargin1600;
-      marginArray1720[index] = objectMargin1720Px + changeMargin1720;
-      markActive.classList.remove("actived")
-      backMarkToActivate.classList.add("actived")
-    }
-
     const nextSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] < lengthImagesArray - 2){
@@ -479,13 +415,13 @@ function Slider(index, button) {
     const backSliderActive = function() {
       if(lengthImagesArray === lengthImagesArray){
         if(counterArray[index] === 1){
-          removeMargin();
+          removeMargin(objectMargin1720Px, changeMargin1720, "px");
           buttonBackGetClick.classList.add("hide");
         } else if(counterArray[index] === lengthImagesArray - 1) {
-          removeMargin();
+          removeMargin(objectMargin1720Px, changeMargin1720, "px");
           buttonNextGetClick.style.display = "flex";
         } else if(counterArray[index] > 1) {
-          removeMargin();
+          removeMargin(objectMargin1720Px, changeMargin1720, "px");
         }
       }
     }
