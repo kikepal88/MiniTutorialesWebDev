@@ -139,6 +139,16 @@ header {
   list-style: none;
   cursor: pointer;
 }
+.header__nav li.header__login {
+  width: 70%;
+  margin: 10px auto 0;
+  padding: 3px;
+  background-color: var(--Color-claro);
+  border: 2px solid var(--Color-complemento);
+  border-radius: 10px;
+  list-style: none;
+  cursor: pointer;
+}
 .header__nav li:active {
   color: var(--Color-claro);
   background-color: var(--Color-complemento);

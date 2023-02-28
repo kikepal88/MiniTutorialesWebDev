@@ -9,5 +9,3 @@ Sitio construido con:  ![](https://firebasestorage.googleapis.com/v0/b/base-de-i
 Proyecto personal desarrollado por ![](https://firebasestorage.googleapis.com/v0/b/base-de-imagenes-proyectos.appspot.com/o/LogoKike_peque%C3%B1o.png?alt=media&token=d8e176a4-f349-4a33-b0ee-99ca18731e9f)
 
 Diseñado y construido con ❤️
-
-#### Sitio en Construcción
