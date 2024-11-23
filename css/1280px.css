@@ -64,6 +64,7 @@ header {
 
 .main__about {
   max-width: 1155px;
+  max-height: 300px;
 }
 .about__description {
   width: 68%;
@@ -72,5 +73,25 @@ header {
 /* ---------- FOOTER -------------- */
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
   max-width: 1155px;
+  margin: 20px auto 0;
+}
+
+.footer__by {
+  width: 70%;
+}
+.footer__by p {
+  max-width: 340px;
+  width: 50%;
+}
+.by__logoKike img {
+  width: 85%;
+}
+.footer__copy {
+  width: 28%;
+  padding: 0;
 }

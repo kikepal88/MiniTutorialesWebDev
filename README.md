@@ -7,5 +7,4 @@ Es un espacio con el objetivo apoyar a Desarrolladores Web a través de pequeño
 #### Tecnologías: 
 ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)   ![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)   ![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-##### Front Page - Proyecto personal diseñado y construido con ❤️ por
-<img src="https://firebasestorage.googleapis.com/v0/b/base-de-imagenes-proyectos.appspot.com/o/LogoFondoOscuro-removebg-preview.png?alt=media&token=1eed64b2-0fae-48f6-b72b-9c30e471d949" alt="Logo Kike" width="400px">
+##### Front Page - Proyecto personal diseñado y construido con ❤️ por  <img src="https://firebasestorage.googleapis.com/v0/b/base-de-imagenes-proyectos.appspot.com/o/LogoKike_peque%C3%B1o.png?alt=media&token=d8e176a4-f349-4a33-b0ee-99ca18731e9f" alt="Logo Kike" width="150px">

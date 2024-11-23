@@ -63,15 +63,16 @@ section {
 .main__about {
   max-width: 1080px;
   width: 96%;
-  max-height: 270px;
+  max-height: 290px;
   padding: 30px 20px;
 }
 .about__name {
   width: 73%;
-  margin: 20px 0;
+  margin: 0 0 20px;
 }
 .about__avatar {
   width: 25%;
+  margin-block-start: 30px;
 }
 .avatar__image {
   width: 70%;
@@ -88,23 +89,3 @@ section {
 }
 
 /* ---------- FOOTER -------------- */
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  max-width: 1080px;
-  margin: 20px auto 0;
-}
-
-.footer__by {
-  width: 70%;
-}
-.by__logoKike img {
-  width: 85%;
-}
-.footer__copy {
-  width: 28%;
-  padding: 0;
-}

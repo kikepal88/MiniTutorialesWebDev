@@ -99,14 +99,13 @@ header {
 
 .main__about {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: column;
-  max-width: initial;
   max-width: 738px;
   width: 95.5%;
-  max-height: 300px;
+  max-height: 350px;
   height: 100%;
 }
 .about__name {
@@ -124,6 +123,7 @@ header {
   flex-wrap: nowrap;
   width: 34%;
   margin: 0;
+  margin-block-start: 50px;
   order: 3;
 }
 .avatar__social-media {
@@ -152,12 +152,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 .by__logoMTWD {
-  max-width: 280px;
-  width: 37%;
-  margin-block-end: 0;
+  width: 100%;
+  margin-block-end: 10px;
 }
 .by__logoMTWD img {
   width: 95%;
@@ -171,6 +170,6 @@ header {
   width: 90%;
 }
 .footer__by p {
-  max-width: 270px;
-  width: 36%;
+  max-width: 330px;
+  width: 43%;
 }
